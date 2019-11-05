@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: MyString
+  description: MyText
+  stock: 
+  discount: 9.99
+  price_per_unit: 9.99
+  dreamtype: one
+
+two:
+  image: MyString
+  description: MyText
+  stock: 
+  discount: 9.99
+  price_per_unit: 9.99
+  dreamtype: two

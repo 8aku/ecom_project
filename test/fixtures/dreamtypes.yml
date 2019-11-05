@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dreamtype: MyString
+  description: MyText
+  horror_rating: 
+  notes: MyText
+
+two:
+  dreamtype: MyString
+  description: MyText
+  horror_rating: 
+  notes: MyText

@@ -1,0 +1,2 @@
+class Dreamtype < ApplicationRecord
+end

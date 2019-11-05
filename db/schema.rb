@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_05_195216) do
+ActiveRecord::Schema.define(version: 2019_11_05_200201) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -53,6 +53,54 @@ ActiveRecord::Schema.define(version: 2019_11_05_195216) do
     t.index ["Province_id"], name: "index_customers_on_Province_id"
   end
 
+  create_table "dreamtypes", force: :cascade do |t|
+    t.string "dreamtype"
+    t.text "description"
+    t.integer "horror_rating"
+    t.text "notes"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "order_details", force: :cascade do |t|
+    t.integer "quantity"
+    t.decimal "discount"
+    t.decimal "total"
+    t.decimal "product_price"
+    t.integer "order_id", null: false
+    t.integer "product_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_order_details_on_order_id"
+    t.index ["product_id"], name: "index_order_details_on_product_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "order_number"
+    t.date "order_date"
+    t.decimal "sales_tax"
+    t.decimal "total"
+    t.date "paid_date"
+    t.boolean "fulfilled"
+    t.text "comments"
+    t.integer "Customer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["Customer_id"], name: "index_orders_on_Customer_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "image"
+    t.text "description"
+    t.integer "stock"
+    t.decimal "discount"
+    t.decimal "price_per_unit"
+    t.integer "dreamtype_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["dreamtype_id"], name: "index_products_on_dreamtype_id"
+  end
+
   create_table "provinces", force: :cascade do |t|
     t.string "code"
     t.decimal "tax_percentage"
@@ -61,4 +109,8 @@ ActiveRecord::Schema.define(version: 2019_11_05_195216) do
   end
 
   add_foreign_key "customers", "Provinces"
+  add_foreign_key "order_details", "orders"
+  add_foreign_key "order_details", "products"
+  add_foreign_key "orders", "Customers"
+  add_foreign_key "products", "dreamtypes"
 end
