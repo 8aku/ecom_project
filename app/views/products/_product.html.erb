@@ -1,0 +1,15 @@
+	<div class = "column">
+	<p><%= product.name %></p>
+	<p><%= image_tag product.image.url, :width => '150' unless product.image.url.nil?  %></p>
+	<p><%= product.price_per_unit %></p>
+	<% if show_deets %>
+	<p>
+		<%= link_to "View Details", product %>
+	</p>
+	<% end %>
+	<% if show_back %>
+	<p>
+		<%= link_to "Back", root_path %>
+	</p>
+	<% end %>
+</div>

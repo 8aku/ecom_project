@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'contact/index'
-  get 'about/index'
+  resources :products
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+
+  root to: 'products#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
