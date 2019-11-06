@@ -7,4 +7,7 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :stock, presence: true
   validates :price_per_unit, presence: true
+
+  paginates_per 4
+
 end

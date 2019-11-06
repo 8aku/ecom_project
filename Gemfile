@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'activeadmin'
 gem 'devise'
 gem 'carrierwave'
+gem 'kaminari'
+gem 'bootstrap-sass', '3.3.7'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
