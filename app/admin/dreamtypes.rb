@@ -5,7 +5,7 @@ ActiveAdmin.register Dreamtype do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :dreamtype, :description, :horror_rating, :notes
+  permit_params :dreamtype, :description, :horror_rating, :notes
   #
   # or
   #
