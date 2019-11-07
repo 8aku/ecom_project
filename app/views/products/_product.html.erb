@@ -1,5 +1,6 @@
-	<div class = "column">
-	<p><%= product.name %></p>
+<div class = "column">
+	<h2><%= product.name %></h2>
+	<p><%= product.description %></p>
 	<p><%= image_tag product.image.url, :width => '150' unless product.image.url.nil?  %></p>
 	<p><%= product.price_per_unit %></p>
 	<% if show_deets %>
@@ -9,7 +10,10 @@
 	<% end %>
 	<% if show_back %>
 	<p>
-		<%= link_to "Back", root_path %>
+		<%= link_to "Dreamtype Listing", dreamtype_path(product.dreamtype) %>
+	</p>
+	<p>
+		<%= link_to "All Products Listing", root_path %>
 	</p>
 	<% end %>
 </div>

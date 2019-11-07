@@ -1,0 +1,10 @@
+<p><%= dreamtype.dreamtype %></p>
+	<% if show_deets %>
+		<% dreamtype.products.each do |product| %>
+	  <p><%= link_to product.name, product_path(product) %></p>
+	<% end %>
+	<% if show_back %>
+	<p>
+		<%= link_to "All Dreamtypes Listing", dreamtypes_path %>
+	</p>
+	<% end %>

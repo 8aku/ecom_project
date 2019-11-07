@@ -1,0 +1,5 @@
+ <h2><%= @dreamtype.dreamtype %></h2>
+ <h3><%= @dreamtype.description %></h3>
+<% @dreamtype.products.each do |product| %>
+  <p><%= link_to product.name, product_path(product) %></p>
+<% end %>
