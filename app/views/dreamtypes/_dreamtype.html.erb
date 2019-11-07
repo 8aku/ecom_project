@@ -1,10 +1,18 @@
-<p><%= dreamtype.dreamtype %></p>
+<div class = "column">
+	<h2><%= dreamtype.dreamtype %></h2>
+	<p><%= dreamtype.description %></p>
+	<p><%= dreamtype.horror_rating %></p>
 	<% if show_deets %>
-		<% dreamtype.products.each do |product| %>
-	  <p><%= link_to product.name, product_path(product) %></p>
+	<p>
+		<%= link_to "View Products", dreamtype %>
+	</p>
 	<% end %>
 	<% if show_back %>
 	<p>
-		<%= link_to "All Dreamtypes Listing", dreamtypes_path %>
+		<% dreamtype.products.each do |dream| %>
+		<p><%= link_to dream.name, product_path(dream) %></p>
+		<% end %>
+		<%= link_to "Back", dreamtypes_path %>
 	</p>
 	<% end %>
+</div>

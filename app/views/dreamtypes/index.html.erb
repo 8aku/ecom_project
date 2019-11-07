@@ -1,3 +1,4 @@
-<% @dreamtypes.each do |dream| %>
-<p><%= link_to dream.dreamtype, dream %></p>
-<% end %>
+<%= render partial: 'dreamtype',
+	collection: @dreamtypes,
+	locals: {show_deets: true, show_back: false} 
+%>
