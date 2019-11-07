@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_07_185244) do
+ActiveRecord::Schema.define(version: 2019_11_07_213901) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 2019_11_07_185244) do
   create_table "orders", force: :cascade do |t|
     t.string "order_number"
     t.date "order_date"
-    t.decimal "sales_tax"
+    t.decimal "pst"
     t.decimal "total"
     t.date "paid_date"
     t.boolean "fulfilled"
@@ -86,12 +86,14 @@ ActiveRecord::Schema.define(version: 2019_11_07_185244) do
     t.integer "Customer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "gst"
+    t.decimal "hst"
     t.index ["Customer_id"], name: "index_orders_on_Customer_id"
   end
 
   create_table "pages", force: :cascade do |t|
-    t.text "content"
-    t.string "heading"
+    t.text "about"
+    t.text "contact"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -111,9 +113,10 @@ ActiveRecord::Schema.define(version: 2019_11_07_185244) do
 
   create_table "provinces", force: :cascade do |t|
     t.string "code"
-    t.decimal "tax_percentage"
+    t.decimal "pst"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "hst"
   end
 
   add_foreign_key "customers", "Provinces"
