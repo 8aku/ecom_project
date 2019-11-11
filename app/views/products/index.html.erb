@@ -1,5 +1,5 @@
 <%= form_tag url_for(:controller => 'products', :action => 'index'), :method => 'get' do %>
-<%= select_tag(:category, options_for_select(@dreamtypes)) %>
+<%= select_tag(:category, options_for_select(@dreamtypes), :include_blank => true)  %>
 	<%= text_field_tag :search %>
   <%= submit_tag 'Search', name: nil %>
 <% end %>

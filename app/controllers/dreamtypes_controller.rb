@@ -1,6 +1,6 @@
 class DreamtypesController < ApplicationController
   def index
-  	@dreamtypes = Dreamtype.all
+  	@dreamtypes = Dreamtype.all.page params[:page]
   end
 
   def show
