@@ -1,3 +1,9 @@
+<%= form_tag url_for(:controller => 'products', :action => 'index'), :method => 'get' do %>
+<%= select_tag(:category, options_for_select(@dreamtypes)) %>
+	<%= text_field_tag :search %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
 <%= render partial: 'product',
 	collection: @products,
 	locals: {show_deets: true, show_back: false} 
