@@ -14,6 +14,17 @@ class ProductsController < ApplicationController
 		@products = Product.order(:name).page params[:page]
 	end
 
+	if params[:datefilter]
+		if (params[:datefilter] == "Recently Updated")
+			@products = Product.where('updated_at > ?', 2.days.ago).page params[:page]
+		end
+		if (params[:datefilter] == "Recently Created")
+			@products = Product.where('created_at > ?', 2.days.ago).page params[:page]
+		end
+	else
+			@products = Product.order(:name).page params[:page]
+	end
+
 	@dreamtypes = Dreamtype.pluck(:dreamtype)
 	
 end

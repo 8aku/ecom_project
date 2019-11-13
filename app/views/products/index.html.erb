@@ -4,6 +4,11 @@
   <%= submit_tag 'Search', name: nil %>
 <% end %>
 
+<%= form_tag url_for(:controller => 'products', :action => 'index'), :method => 'get' do %>
+<%= select_tag(:datefilter, options_for_select(["Recently Updated", "Recently Created"]), :include_blank => true)  %>
+  <%= submit_tag 'Filter', name: nil %>
+<% end %>
+
 <%= render partial: 'product',
 	collection: @products,
 	locals: {show_deets: true, show_back: false} 
