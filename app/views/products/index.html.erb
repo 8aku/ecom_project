@@ -14,4 +14,10 @@
 	locals: {show_deets: true, show_back: false} 
 %>
 
+<div>
+<% if flash[:notice] %>
+	<div class="notice"><%= flash[:notice] %></div>
+<% end %>
+</div>
+
 <%= paginate @products %> 

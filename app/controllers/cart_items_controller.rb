@@ -4,8 +4,9 @@ class CartItemsController < ApplicationController
   
   def create
     @cart.add_product(params)
-    
-      redirect_to products_path
+    flash[:notice] = params[:product][:quantity] + " item added to shopping cart."
+    redirect_to products_path
+
   end
 
   def update
