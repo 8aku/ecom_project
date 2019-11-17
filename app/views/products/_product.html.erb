@@ -16,4 +16,13 @@
 		<%= link_to "Products Listing", root_path %>
 	</p>
 	<% end %>
-</div>
+
+    <% if product.stock.zero? %>
+    		Out of stock
+    <% else %>
+      <%= form_for product, :url => cart_items_path, :html => { :method => :post } do |f|%>
+      <%= f.hidden_field :product_id, value: product.id %>
+    	<%= f.number_field :quantity, value: 1, class: "number-tag", min: 1 %>
+      <%= f.submit 'Add to Cart', class: "btn btn-success" %>
+      <% end %>
+    <% end %>

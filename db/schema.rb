@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_07_213901) do
+ActiveRecord::Schema.define(version: 2019_11_17_025834) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -36,6 +36,21 @@ ActiveRecord::Schema.define(version: 2019_11_07_213901) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer "products_id", null: false
+    t.integer "cart_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "quantity"
+    t.index ["cart_id"], name: "index_cart_items_on_cart_id"
+    t.index ["products_id"], name: "index_cart_items_on_products_id"
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "customers", force: :cascade do |t|
@@ -119,6 +134,8 @@ ActiveRecord::Schema.define(version: 2019_11_07_213901) do
     t.decimal "hst"
   end
 
+  add_foreign_key "cart_items", "carts"
+  add_foreign_key "cart_items", "products", column: "products_id"
   add_foreign_key "customers", "Provinces"
   add_foreign_key "order_details", "orders"
   add_foreign_key "order_details", "products"
