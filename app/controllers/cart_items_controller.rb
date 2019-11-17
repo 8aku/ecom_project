@@ -5,11 +5,7 @@ class CartItemsController < ApplicationController
   def create
     @cart.add_product(params)
     
-    if @cart.save
-      redirect_to carts_path
-    else
       redirect_to products_path
-    end
   end
 
   def update
