@@ -1,6 +1,7 @@
-
-<%= debug current_cart.cart_items %>
-
  <% current_cart.cart_items.each do |item| %>
   <p><%= item.quantity %></p>
+   <p><%= item.product.name %></p>
+   <p><%= link_to 'Delete Cart Item', cart_item_path(item),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></p>
     <% end %>

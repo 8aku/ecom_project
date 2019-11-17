@@ -3,13 +3,13 @@ class CartItemsController < ApplicationController
   before_action :set_cart_item, only: [:update, :destroy]
   
   def create
-    new_item = CartItem.new(products_id: params[:product][:products_id], 
-                                  quantity: params[:product][:quantity],
-                                  cart_id: current_cart.id)
-
-    new_item.save!
-
-    redirect_to carts_path
+    @cart.add_product(params)
+    
+    if @cart.save
+      redirect_to carts_path
+    else
+      redirect_to products_path
+    end
   end
 
   def update
