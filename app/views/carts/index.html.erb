@@ -1,0 +1,6 @@
+
+<%= debug current_cart.cart_items %>
+
+ <% current_cart.cart_items.each do |item| %>
+  <p><%= item.quantity %></p>
+    <% end %>

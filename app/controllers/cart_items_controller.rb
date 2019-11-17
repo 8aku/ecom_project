@@ -3,26 +3,26 @@ class CartItemsController < ApplicationController
   before_action :set_cart_item, only: [:update, :destroy]
   
   def create
-    @cart.add_product(params)
-    
-    if @cart.save
-      redirect_to cart_path
-    else
-      redirect_to @product
-    end
+    new_item = CartItem.new(products_id: params[:product][:products_id], 
+                                  quantity: params[:product][:quantity],
+                                  cart_id: current_cart.id)
+
+    new_item.save!
+
+    redirect_to carts_path
   end
 
   def update
     if @cart_item.update(cart_item_params)
-        redirect_to cart_path
+        redirect_to carts_path
     else
-        redirect_to cart_path
+        redirect_to carts_path
     end
   end
 
   def destroy
     @cart_item.destroy
-    redirect_to cart_path
+    redirect_to carts_path
   end
 
   private
@@ -35,6 +35,6 @@ class CartItemsController < ApplicationController
     end
 
     def cart_item_params
-      params.require(:cart_item).permit(:product_id, :cart_id, :quantity)
+      params.require(:cart_item).permit(:products_id, :cart_id, :quantity)
     end
 end

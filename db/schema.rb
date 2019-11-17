@@ -138,7 +138,7 @@ ActiveRecord::Schema.define(version: 2019_11_17_025834) do
   add_foreign_key "cart_items", "products", column: "products_id"
   add_foreign_key "customers", "Provinces"
   add_foreign_key "order_details", "orders"
-  add_foreign_key "order_details", "products"
+  add_foreign_key "order_details", "products" 
   add_foreign_key "orders", "Customers"
   add_foreign_key "products", "dreamtypes"
 end
