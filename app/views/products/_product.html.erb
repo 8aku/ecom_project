@@ -7,12 +7,12 @@
 	
 <div id ="cart">
     <% if product.stock.zero? %>
-    		Out of stock
+    		<p>0UT OF STOCK</p>
     <% else %>
       <%= form_for product, :url => cart_items_path, :html => { :method => :post } do |f|%>
       <%= f.hidden_field :products_id, value: product.id %>
     	<%= f.number_field :quantity, value: 1, min: 1 %>
-      <%= f.submit 'Add to Cart', class: "btn btn-success" %>
+      <%= f.submit 'Add to Cart', class: "btn btn-dark" %>
       <% end %>
     <% end %>
 </div>

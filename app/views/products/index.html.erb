@@ -1,12 +1,12 @@
 <%= form_tag url_for(:controller => 'products', :action => 'index'), :method => 'get' do %>
 <%= select_tag(:category, options_for_select(@dreamtypes), :include_blank => true)  %>
 	<%= text_field_tag :search %>
-  <%= submit_tag 'Search', name: nil %>
+  <%= submit_tag 'Search', name: nil, class: "btn btn-light" %>
 <% end %>
 
 <%= form_tag url_for(:controller => 'products', :action => 'index'), :method => 'get' do %>
-<%= select_tag(:datefilter, options_for_select(["Recently Updated", "Recently Created"]), :include_blank => true)  %>
-  <%= submit_tag 'Filter', name: nil %>
+<%= select_tag(:datefilter, options_for_select(["Recently Updated", "Recently Created"]), :include_blank => false)  %>
+  <%= submit_tag 'Filter', name: nil, class: "btn btn-light" %>
 <% end %>
 
 <%= render partial: 'product',

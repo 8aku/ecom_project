@@ -1,7 +1,23 @@
  <% current_cart.cart_items.each do |item| %>
-  <p><%= item.quantity %></p>
-   <p><%= item.product.name %></p>
-   <p><%= link_to 'Delete Cart Item', cart_item_path(item),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></p>
-    <% end %>
+ <p><%= item.quantity %></p>
+ <p><%= item.product.name %></p>
+ <tr id="delete_item">
+    <td class="input">
+      <%= form_for item, :method => :DELETE do |f| %>
+      <%= f.submit "Delete" %>
+      <% end %>
+    </td>
+</tr>
+
+ <tr id="edit_quantity">
+    <td class="input">
+      <%= form_for item, :method => :PUT do |f| %>
+    </td>
+    <td class="input">
+      <%= f.number_field :quantity, value: item.quantity, min: 1 %>
+    </td>
+      <%= f.submit "Confirm edit" %>
+      <% end %>
+    </td>
+</tr>
+ <% end %>
