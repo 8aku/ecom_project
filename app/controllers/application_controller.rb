@@ -1,19 +1,19 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :set_cart
-  helper_method :current_cart
+  before_action :set_bag
+  helper_method :current_bag
  
  private
-  def set_cart
-    @cart = Cart.find(session[:cart_id])
+  def set_bag
+    @bag =  ShoppingBag.find(session[:cart_id])
     rescue ActiveRecord::RecordNotFound
-    @cart = Cart.create
+    @bag = ShoppingBag.create
     session[:cart_id] = @cart.id
   end
 
-   def current_cart
+   def current_bag
       if !session[:cart_id].nil?
-        Cart.find(session[:cart_id])
+        ShoppingBag.find(session[:cart_id])
       end
     end
 end

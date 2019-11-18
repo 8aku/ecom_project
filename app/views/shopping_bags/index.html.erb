@@ -1,4 +1,4 @@
- <% current_cart.cart_items.each do |item| %>
+ <% current_bag.shopping_items.each do |item| %>
   <div id="container">
  <h2>Product Name: <%= item.product.name %></h2>
  <h3>Quantity: <%= item.quantity %></h3>
@@ -16,6 +16,6 @@
  <% end %>
 </div>
 
-<% if current_cart.total_price != 0 %>
-<h4>Cart Total Before Tax: <%= number_to_currency(current_cart.total_price) %></h4>
+<% if current_bag.total_price != 0 %>
+<h4>Cart Total Before Tax: <%= number_to_currency(current_bag.total_price) %></h4>
 <% end %>
