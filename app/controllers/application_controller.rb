@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   before_action :set_bag
   helper_method :current_bag
  
- private
   def set_bag
     @bag =  ShoppingBag.find(session[:cart_id])
     rescue ActiveRecord::RecordNotFound
