@@ -13924,3 +13924,141 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 2257ms (Views: 2166.2ms | ActiveRecord: 79.1ms | Allocations: 1792614)
 
 
+Started GET "/shopping_bags" for ::1 at 2019-11-19 16:15:20 -0600
+Processing by ShoppingBagsController#index as HTML
+  [1m[36mShoppingBag Load (0.3ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `set_bag'
+  Rendering shopping_bags/index.html.erb within layouts/application
+  [1m[36mCACHE ShoppingBag Load (0.0ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_bag'
+  [1m[36mShoppingItem Load (0.2ms)[0m  [1m[34mSELECT "shopping_items".* FROM "shopping_items" WHERE "shopping_items"."shopping_bag_id" = ?[0m  [["shopping_bag_id", 33]]
+  ↳ app/views/shopping_bags/index.html.erb:1
+  [1m[36mCACHE ShoppingBag Load (0.0ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_bag'
+  [1m[36mCACHE ShoppingItem Load (0.0ms)[0m  [1m[34mSELECT "shopping_items".* FROM "shopping_items" WHERE "shopping_items"."shopping_bag_id" = ?[0m  [["shopping_bag_id", 33]]
+  ↳ app/models/shopping_bag.rb:27:in `total_price'
+  Rendered shopping_bags/index.html.erb within layouts/application (Duration: 58.3ms | Allocations: 5992)
+Completed 200 OK in 83ms (Views: 79.5ms | ActiveRecord: 1.1ms | Allocations: 31147)
+
+
+Started GET "/" for ::1 at 2019-11-19 16:15:21 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [2 times] (Duration: 1.8ms | Allocations: 813)
+  Rendered products/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2279)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.7ms | Allocations: 26985)
+
+
+Started GET "/about" for ::1 at 2019-11-19 16:15:29 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 37.0ms | Allocations: 3990)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.8ms | Allocations: 29067)
+
+
+Started GET "/contact" for ::1 at 2019-11-19 16:15:30 -0600
+Processing by PagesController#contact as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `set_bag'
+  Rendering pages/contact.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."contact" FROM "pages"[0m
+  ↳ app/views/pages/contact.html.erb:3
+  Rendered pages/contact.html.erb within layouts/application (Duration: 10.3ms | Allocations: 730)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.3ms | Allocations: 25003)
+
+
+Started GET "/" for ::1 at 2019-11-19 16:15:32 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [2 times] (Duration: 2.0ms | Allocations: 813)
+  Rendered products/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2253)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.4ms | Allocations: 26978)
+
+
+Started GET "/shopping_bags" for ::1 at 2019-11-19 16:15:34 -0600
+Processing by ShoppingBagsController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `set_bag'
+  Rendering shopping_bags/index.html.erb within layouts/application
+  [1m[36mCACHE ShoppingBag Load (0.0ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_bag'
+  [1m[36mShoppingItem Load (0.1ms)[0m  [1m[34mSELECT "shopping_items".* FROM "shopping_items" WHERE "shopping_items"."shopping_bag_id" = ?[0m  [["shopping_bag_id", 33]]
+  ↳ app/views/shopping_bags/index.html.erb:1
+  [1m[36mCACHE ShoppingBag Load (0.0ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_bag'
+  [1m[36mCACHE ShoppingItem Load (0.0ms)[0m  [1m[34mSELECT "shopping_items".* FROM "shopping_items" WHERE "shopping_items"."shopping_bag_id" = ?[0m  [["shopping_bag_id", 33]]
+  ↳ app/models/shopping_bag.rb:27:in `total_price'
+  Rendered shopping_bags/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2277)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.4ms | Allocations: 26385)
+
+
+Started GET "/dreamtypes" for ::1 at 2019-11-19 16:15:35 -0600
+Processing by DreamtypesController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `set_bag'
+  Rendering dreamtypes/index.html.erb within layouts/application
+  [1m[36mDreamtype Load (0.3ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/dreamtypes/index.html.erb:1
+  Rendered collection of dreamtypes/_dreamtype.html.erb [2 times] (Duration: 0.9ms | Allocations: 427)
+  Rendered dreamtypes/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 5489)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.7ms | Allocations: 30544)
+
+
+Started GET "/" for ::1 at 2019-11-19 16:15:35 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [2 times] (Duration: 2.1ms | Allocations: 813)
+  Rendered products/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2252)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.5ms | Allocations: 26946)
+
+
+Started GET "/" for ::1 at 2019-11-19 16:16:07 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [2 times] (Duration: 45.7ms | Allocations: 4956)
+  Rendered products/index.html.erb within layouts/application (Duration: 50.3ms | Allocations: 7637)
+Completed 200 OK in 78ms (Views: 74.6ms | ActiveRecord: 0.4ms | Allocations: 33579)
+
+
+Started GET "/" for ::1 at 2019-11-19 16:16:20 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [2 times] (Duration: 1.9ms | Allocations: 1434)
+  Rendered products/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 4110)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.3ms | Allocations: 30135)
+
+

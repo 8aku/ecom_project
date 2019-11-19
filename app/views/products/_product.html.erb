@@ -3,7 +3,7 @@
 	<h2><%= product.name %></h2>
 	<p><%= product.description %></p>
 	<p><%= image_tag product.image.url, :width => '150' unless product.image.url.nil?  %></p>
-	<p><%= product.price_per_unit %></p>
+	<p><%= number_to_currency(product.price_per_unit) %> each</p>
 	
 <div id ="cart">
     <% if product.stock.zero? %>
