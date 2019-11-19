@@ -13871,3 +13871,56 @@ Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.6ms | Allocations: 353
   [1m[36mShoppingBag Destroy (1.4ms)[0m  [1m[31mDELETE FROM "shopping_bags"[0m
   [1m[36mShoppingItem Destroy (76.5ms)[0m  [1m[31mDELETE FROM "shopping_items"[0m
   [1m[36mShoppingBag Destroy (76.6ms)[0m  [1m[31mDELETE FROM "shopping_bags"[0m
+Started GET "/" for ::1 at 2019-11-19 16:11:35 -0600
+  [1m[35m (64.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:10:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.3ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-11-19 22:11:36.816784"], ["updated_at", "2019-11-19 22:11:36.816784"]]
+  ↳ app/controllers/application_controller.rb:10:in `rescue in set_bag'
+  [1m[35m (229.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:10:in `rescue in set_bag'
+Completed 500 Internal Server Error in 355ms (ActiveRecord: 230.8ms | Allocations: 8367)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/application_controller.rb:11:in `rescue in set_bag'
+app/controllers/application_controller.rb:7:in `set_bag'
+Started GET "/products" for ::1 at 2019-11-19 16:11:56 -0600
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:10:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.3ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-11-19 22:11:56.886784"], ["updated_at", "2019-11-19 22:11:56.886784"]]
+  ↳ app/controllers/application_controller.rb:10:in `rescue in set_bag'
+  [1m[35m (236.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:10:in `rescue in set_bag'
+Completed 500 Internal Server Error in 244ms (ActiveRecord: 236.5ms | Allocations: 4879)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/application_controller.rb:11:in `rescue in set_bag'
+app/controllers/application_controller.rb:7:in `set_bag'
+Started GET "/products" for ::1 at 2019-11-19 16:13:38 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:10:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-11-19 22:13:39.086964"], ["updated_at", "2019-11-19 22:13:39.086964"]]
+  ↳ app/controllers/application_controller.rb:10:in `rescue in set_bag'
+  [1m[35m (76.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:10:in `rescue in set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [2 times] (Duration: 41.9ms | Allocations: 1581)
+  Rendered products/index.html.erb within layouts/application (Duration: 113.3ms | Allocations: 11952)
+Completed 200 OK in 2257ms (Views: 2166.2ms | ActiveRecord: 79.1ms | Allocations: 1792614)
+
+

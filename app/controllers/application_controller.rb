@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     @bag =  ShoppingBag.find(session[:cart_id])
     rescue ActiveRecord::RecordNotFound
     @bag = ShoppingBag.create
-    session[:cart_id] = @cart.id
+    session[:cart_id] = @bag.id
   end
 
    def current_bag
