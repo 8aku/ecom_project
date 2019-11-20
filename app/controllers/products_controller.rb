@@ -1,6 +1,9 @@
 class ProductsController < ApplicationController
 	def index
 		if params[:search]
+			if (params[:search] == "")
+				@products = Product.order(:name).page params[:page]
+			end
 			if (params[:category] == "")
 				@products = Product.where("name LIKE ? OR Products.description LIKE ?", "%#{params[:search]}%", "%#{params[:search]}%").page params[:page]
 			end
