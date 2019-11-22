@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   
   get '/about', to: 'pages#about', as: 'about'
   get '/contact', to: 'pages#contact', as: 'contact'
+  get '/register', to: 'customers#register', as: 'register'
+  get '/login', to: 'customers#login', as: 'login'
+
 
   root to: 'products#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -15678,3 +15678,502 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 33ms (Views: 27.8ms | ActiveRecord: 1.7ms | Allocations: 27962)
 
 
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:47:21 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/r/Documents/term5/full_stack/ecom_project/app/controllers/products_controller.rb:24: syntax error, unexpected tIDENTIFIER, expecting end
+...('updated_at > ?', 2.days.ago)v
+...                              ^):
+  
+app/controllers/products_controller.rb:24: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/products_controller.rb:24: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/products_controller.rb:24: syntax error, unexpected tIDENTIFIER, expecting end
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:47:49 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 2.2ms | Allocations: 1669)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 11229)
+Completed 200 OK in 34ms (Views: 25.4ms | ActiveRecord: 1.9ms | Allocations: 40767)
+
+
+Started GET "/products?category=&search=" for ::1 at 2019-11-20 09:47:51 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"", "search"=>""}
+  [1m[36mShoppingBag Load (0.3ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (name LIKE '%%' OR Products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 3.9ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3039)
+Completed 200 OK in 34ms (Views: 28.3ms | ActiveRecord: 0.9ms | Allocations: 27849)
+
+
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:47:53 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 4.1ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 3145)
+Completed 200 OK in 34ms (Views: 29.0ms | ActiveRecord: 0.7ms | Allocations: 28035)
+
+
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:47:58 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 3.3ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3145)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.5ms | Allocations: 28039)
+
+
+Started GET "/products?category=Absurd+Dream&search=" for ::1 at 2019-11-20 09:48:00 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"Absurd Dream", "search"=>""}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 4.4ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 3030)
+Completed 200 OK in 36ms (Views: 30.1ms | ActiveRecord: 0.9ms | Allocations: 27730)
+
+
+Started GET "/products?category=Absurd+Dream&search=" for ::1 at 2019-11-20 09:48:01 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"Absurd Dream", "search"=>""}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 3.5ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3005)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.5ms | Allocations: 27713)
+
+
+Started GET "/products/3" for ::1 at 2019-11-20 09:48:22 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:38:in `show'
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/_product.html.erb:26
+  Rendered products/_product.html.erb (Duration: 7.8ms | Allocations: 6599)
+  Rendered products/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 6686)
+Completed 200 OK in 34ms (Views: 20.0ms | ActiveRecord: 2.0ms | Allocations: 41105)
+
+
+Started GET "/dreamtypes/2" for ::1 at 2019-11-20 09:48:24 -0600
+Processing by DreamtypesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dreamtypes_controller.rb:7:in `show'
+  Rendering dreamtypes/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."dreamtype_id" = ?[0m  [["dreamtype_id", 2]]
+  ↳ app/views/dreamtypes/_dreamtype.html.erb:12
+  Rendered dreamtypes/_dreamtype.html.erb (Duration: 2.8ms | Allocations: 1950)
+  Rendered dreamtypes/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2267)
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 0.4ms | Allocations: 27763)
+
+
+Started GET "/about" for ::1 at 2019-11-20 09:48:26 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3698)
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 1.2ms | Allocations: 28064)
+
+
+Started GET "/" for ::1 at 2019-11-20 09:48:30 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 2.2ms | Allocations: 1570)
+  Rendered products/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 4597)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.6ms | Allocations: 29370)
+
+
+Started GET "/products?category=&search=" for ::1 at 2019-11-20 09:48:31 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"", "search"=>""}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (name LIKE '%%' OR Products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 4.6ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 3041)
+Completed 200 OK in 33ms (Views: 28.1ms | ActiveRecord: 0.7ms | Allocations: 27844)
+
+
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:48:34 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 2.2ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3156)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.4ms | Allocations: 28056)
+
+
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:48:46 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 2.5ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3145)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.5ms | Allocations: 28044)
+
+
+Started GET "/products?category=Absurd+Dream&search=" for ::1 at 2019-11-20 09:49:01 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"Absurd Dream", "search"=>""}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 2.0ms | Allocations: 1669)
+  Rendered products/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 10319)
+Completed 200 OK in 72ms (Views: 64.4ms | ActiveRecord: 1.4ms | Allocations: 39674)
+
+
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:49:04 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 3.5ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3967)
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 0.9ms | Allocations: 28768)
+
+
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:49:27 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 2.4ms | Allocations: 1669)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 11229)
+Completed 200 OK in 35ms (Views: 24.9ms | ActiveRecord: 2.0ms | Allocations: 40744)
+
+
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:49:29 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 1.9ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3147)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.5ms | Allocations: 28042)
+
+
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:49:45 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 3.1ms | Allocations: 1669)
+  Rendered products/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 11229)
+Completed 200 OK in 38ms (Views: 26.9ms | ActiveRecord: 2.1ms | Allocations: 40713)
+
+
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:49:48 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 5.0ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 3147)
+Completed 200 OK in 41ms (Views: 34.6ms | ActiveRecord: 1.0ms | Allocations: 28032)
+
+
+Started GET "/products?category=Absurd+Dream&search=" for ::1 at 2019-11-20 09:49:50 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"Absurd Dream", "search"=>""}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 2.5ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3030)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 0.6ms | Allocations: 27749)
+
+
+Started GET "/products?category=&search=dd" for ::1 at 2019-11-20 09:49:52 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"", "search"=>"dd"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE (name LIKE '%dd%' OR Products.description LIKE '%dd%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered products/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1432)
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 0.8ms | Allocations: 26164)
+
+
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-11-20 09:49:54 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:33:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 3.5ms | Allocations: 1562)
+  Rendered products/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3145)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.5ms | Allocations: 28025)
+
+
+Started GET "/" for ::1 at 2019-11-22 16:52:38 -0600
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.3ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-11-22 22:52:38.968275"], ["updated_at", "2019-11-22 22:52:38.968275"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (126.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:27:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 71.9ms | Allocations: 3136)
+  Rendered products/index.html.erb within layouts/application (Duration: 136.4ms | Allocations: 13688)
+Completed 200 OK in 1878ms (Views: 1667.4ms | ActiveRecord: 129.2ms | Allocations: 1503431)
+
+
+Started GET "/register" for ::1 at 2019-11-22 17:11:15 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 555.5ms | Allocations: 253864)
+Completed 500 Internal Server Error in 563ms (ActiveRecord: 0.2ms | Allocations: 258843)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `register' for #<#<Class:0x00007f6cb06d5d20>:0x00007f6cb06d4240>
+Did you mean?  register_url):
+    1: <%= form_for @customer, :url => register, :html => { :method => :post } do %>
+    2: 
+    3:  <%= label_tag(:first_name, "First Name:") %>
+    4:   <%= text_field_tag(:first_name) %>
+  
+app/views/customers/register.html.erb:1
+Started GET "/register" for ::1 at 2019-11-22 17:11:23 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1112)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 3205)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @customer, :url => register_url, :html => { :method => :post } do %>
+    2: 
+    3:  <%= label_tag(:first_name, "First Name:") %>
+    4:   <%= text_field_tag(:first_name) %>
+  
+app/views/customers/register.html.erb:1
+Started GET "/register" for ::1 at 2019-11-22 17:11:29 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 428.5ms | Allocations: 253589)
+Completed 500 Internal Server Error in 432ms (ActiveRecord: 0.1ms | Allocations: 255624)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer' for #<#<Class:0x00007f6c9b67c078>:0x00007f6c9b6b6610>
+Did you mean?  customer_url):
+    1: <%= form_for customer, :url => register_url, :html => { :method => :post } do %>
+    2: 
+    3:  <%= label_tag(:first_name, "First Name:") %>
+    4:   <%= text_field_tag(:first_name) %>
+  
+app/views/customers/register.html.erb:1
+Started GET "/register" for ::1 at 2019-11-22 17:11:32 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 463.2ms | Allocations: 253587)
+Completed 500 Internal Server Error in 467ms (ActiveRecord: 0.1ms | Allocations: 255640)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customers' for #<#<Class:0x00007f6ca8b68f20>:0x00007f6ca8b8f4b8>
+Did you mean?  customers_url):
+    1: <%= form_for customers, :url => register_url, :html => { :method => :post } do %>
+    2: 
+    3:  <%= label_tag(:first_name, "First Name:") %>
+    4:   <%= text_field_tag(:first_name) %>
+  
+app/views/customers/register.html.erb:1
+Started GET "/register" for ::1 at 2019-11-22 17:11:56 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 464.7ms | Allocations: 253821)
+Completed 500 Internal Server Error in 468ms (ActiveRecord: 0.1ms | Allocations: 255864)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007f6cb0e4c270>:0x00007f6cb0e3e800>):
+    3:  <%= label_tag(:first_name, "First Name:") %>
+    4:   <%= text_field_tag(:first_name) %>
+    5: 
+    6:       <%= f.submit 'Register Customer', class: "btn btn-dark" %>
+    7:       <% end %>
+  
+app/views/customers/register.html.erb:6
+app/views/customers/register.html.erb:1
+Started GET "/register" for ::1 at 2019-11-22 17:12:03 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 218.5ms | Allocations: 128713)
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.1ms | Allocations: 130756)
+
+
+  
+ActionView::Template::Error (undefined method `submit' for #<#<Class:0x00007f6c98f54e78>:0x00007f6c98f4b5d0>
+Did you mean?  submit_tag):
+    3:  <%= label_tag(:first_name, "First Name:") %>
+    4:   <%= text_field_tag(:first_name) %>
+    5: 
+    6:       <%= submit 'Register Customer', class: "btn btn-dark" %>
+    7:       <% end %>
+  
+app/views/customers/register.html.erb:6
+app/views/customers/register.html.erb:1
+Started GET "/register" for ::1 at 2019-11-22 17:12:16 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.9ms | Allocations: 452)
+Completed 200 OK in 74ms (Views: 17.8ms | ActiveRecord: 0.1ms | Allocations: 25988)
+
+
+Started GET "/register" for ::1 at 2019-11-22 17:19:02 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.3ms | Allocations: 901)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.2ms | Allocations: 26311)
+
+
+Started GET "/register" for ::1 at 2019-11-22 17:19:59 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.2ms | Allocations: 897)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.1ms | Allocations: 26316)
+
+
