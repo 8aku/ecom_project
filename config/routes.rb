@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact', as: 'contact'
   get '/register', to: 'customers#register', as: 'register'
   get '/login', to: 'customers#login', as: 'login'
+  post '/register', to: 'customers#register', as: 'register_post'
+  post '/login', to: 'customers#login', as: 'login_post'
 
 
   root to: 'products#index'

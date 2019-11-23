@@ -25,6 +25,11 @@
       <%= yield %>
     </div>
   </div>
+
+   <% if session[:customer_name] %>
+ <p>Logged In As: <%= session[:customer_name] %></p>
+ <% end %>
+
 </div>
 </body>
 </html>

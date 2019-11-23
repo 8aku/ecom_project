@@ -16177,3 +16177,1627 @@ Processing by CustomersController#register as HTML
 Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.1ms | Allocations: 26316)
 
 
+Started GET "/register" for ::1 at 2019-11-22 17:28:14 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/r/Documents/term5/full_stack/ecom_project/app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+...		password: params[:password]))
+...		                            ^):
+  
+app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+Started GET "/register" for ::1 at 2019-11-22 17:28:56 -0600
+  
+SyntaxError (/home/r/Documents/term5/full_stack/ecom_project/app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+...		password: params[:password]))
+...		                            ^):
+  
+app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+Started GET "/register" for ::1 at 2019-11-22 17:28:58 -0600
+  
+SyntaxError (/home/r/Documents/term5/full_stack/ecom_project/app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+...		password: params[:password]))
+...		                            ^):
+  
+app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+app/controllers/customers_controller.rb:11: syntax error, unexpected ')', expecting end
+Started GET "/register" for ::1 at 2019-11-22 17:29:13 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1023)
+Completed 200 OK in 52ms (Views: 17.2ms | ActiveRecord: 1.1ms | Allocations: 41231)
+
+
+Started POST "/register" for ::1 at 2019-11-22 17:29:32 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/register"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/register" for ::1 at 2019-11-22 17:30:22 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"JBd08Z48aMSqKCO9Cb1Z6mcte5l2cSKFEcVlC8EmmpOSi/P8B4If3rdFNueF9lHbfABzBNgiCi6lQ0yf2RBzdw==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.7ms | Allocations: 617)
+Completed 200 OK in 27ms (Views: 13.7ms | ActiveRecord: 1.0ms | Allocations: 37355)
+
+
+Started GET "/admin" for ::1 at 2019-11-22 17:30:27 -0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.2ms | Allocations: 1648)
+
+
+Started GET "/admin/login" for ::1 at 2019-11-22 17:30:27 -0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (Duration: 1.0ms | Allocations: 589)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 196.4ms | Allocations: 8981)
+Completed 200 OK in 551ms (Views: 497.2ms | ActiveRecord: 0.7ms | Allocations: 140083)
+
+
+Started POST "/admin/login" for ::1 at 2019-11-22 17:30:37 -0600
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"0Ts+i94DvKKjBPNjtUg6QF17+a7UJUQ8k6DKhmiwiOZnp7mGR73LuL5p5jk5AzJxRlbxM3p2bJcnJuMScIZhAg==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mShoppingBag Load (0.3ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 343ms (ActiveRecord: 0.6ms | Allocations: 6294)
+
+
+Started GET "/admin" for ::1 at 2019-11-22 17:30:37 -0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb (Duration: 72.5ms | Allocations: 117819)
+Completed 200 OK in 84ms (Views: 79.6ms | ActiveRecord: 0.4ms | Allocations: 121294)
+
+
+Started GET "/admin/customers" for ::1 at 2019-11-22 17:30:40 -0600
+Processing by Admin::CustomersController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "customers" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProvince Load (0.2ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces"[0m
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (Duration: 173.6ms | Allocations: 138767)
+Completed 200 OK in 222ms (Views: 194.8ms | ActiveRecord: 1.3ms | Allocations: 143044)
+
+
+Started GET "/admin/login" for ::1 at 2019-11-22 17:30:57 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms | Allocations: 7403)
+
+
+Started GET "/register" for ::1 at 2019-11-22 17:30:58 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/register"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/register" for ::1 at 2019-11-22 17:31:04 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/register"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/register" for ::1 at 2019-11-22 17:31:38 -0600
+  
+ArgumentError (Invalid route name, already in use: 'register' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:18:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/register" for ::1 at 2019-11-22 17:32:12 -0600
+  
+ArgumentError (Invalid route name, already in use: 'login' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+https://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:19:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/register" for ::1 at 2019-11-22 17:32:28 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 20ms (ActiveRecord: 1.3ms | Allocations: 16684)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, First name can't be blank, Last name can't be blank, Email can't be blank, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:13:in `register'
+Started GET "/register" for ::1 at 2019-11-22 17:32:39 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 11ms (ActiveRecord: 0.2ms | Allocations: 5516)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, First name can't be blank, Last name can't be blank, Email can't be blank, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:13:in `register'
+Started GET "/register" for ::1 at 2019-11-22 17:33:32 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for CustomersController):
+  
+actionpack (6.0.1) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.1) lib/action_dispatch/routing/route_set.rb:837:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/register" for ::1 at 2019-11-22 17:34:00 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 19ms (ActiveRecord: 1.2ms | Allocations: 16662)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, First name can't be blank, Last name can't be blank, Email can't be blank, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:13:in `register'
+Started GET "/register_post" for ::1 at 2019-11-22 17:34:08 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/register_post"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/register_post" for ::1 at 2019-11-22 17:34:40 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/register_post"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/register" for ::1 at 2019-11-22 17:34:42 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 30ms (ActiveRecord: 2.0ms | Allocations: 16658)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, First name can't be blank, Last name can't be blank, Email can't be blank, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:13:in `register'
+Started GET "/register" for ::1 at 2019-11-22 17:34:49 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 8ms (ActiveRecord: 0.2ms | Allocations: 5518)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, First name can't be blank, Last name can't be blank, Email can't be blank, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:13:in `register'
+Started GET "/register" for ::1 at 2019-11-22 17:35:02 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 437.4ms | Allocations: 254326)
+Completed 500 Internal Server Error in 458ms (ActiveRecord: 1.4ms | Allocations: 271604)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `register_post' for #<#<Class:0x00007f6cb0d785d8>:0x00007f6cb0d869d0>
+Did you mean?  register_post_url
+               register_path
+               register_url):
+    1: <%= form_for customers_url, :url => register_post, :html => { :method => :post } do %>
+    2: <p>
+    3: 	<%= label_tag(:email, "Email:") %>
+    4: 	<%= text_field_tag(:email) %>
+  
+app/views/customers/register.html.erb:1
+Started GET "/register" for ::1 at 2019-11-22 17:35:17 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1003)
+Completed 200 OK in 22ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 30522)
+
+
+Started POST "/register" for ::1 at 2019-11-22 17:35:26 -0600
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"DVrFKoPZ/R4ZmZDDb0ZzAVSD9v2HyIUE0rXlc6qcupytARBxtLvk/y3gPMB9U8DpaSsn8dn8pmxVjV25UQaPfw==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.3ms | Allocations: 569)
+Completed 200 OK in 36ms (Views: 28.0ms | ActiveRecord: 0.2ms | Allocations: 26868)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/register" for ::1 at 2019-11-22 17:36:35 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1022)
+Completed 200 OK in 42ms (Views: 20.5ms | ActiveRecord: 1.3ms | Allocations: 41730)
+
+
+Started GET "/register" for ::1 at 2019-11-22 17:36:55 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 19ms (ActiveRecord: 1.2ms | Allocations: 16627)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, First name can't be blank, Last name can't be blank, Email can't be blank, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:13:in `register'
+Started GET "/register" for ::1 at 2019-11-22 17:37:31 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 29ms (ActiveRecord: 1.6ms | Allocations: 16661)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, First name can't be blank, Last name can't be blank, Email can't be blank, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:15:in `register'
+Started GET "/register" for ::1 at 2019-11-22 17:40:14 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1022)
+Completed 200 OK in 24ms (Views: 17.0ms | ActiveRecord: 0.8ms | Allocations: 29834)
+
+
+Started POST "/register" for ::1 at 2019-11-22 17:40:22 -0600
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"tqfWnOr8LhyVKRL6hVVXfvZHGiiptVaxuobyRWyjLVIW/APH3Z43/aFQvvmXQOSWy+/LJPeBddk9vkqPlzkYsQ==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.1ms | Allocations: 569)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.2ms | Allocations: 24753)
+
+
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/register" for ::1 at 2019-11-22 17:40:50 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.7ms | Allocations: 628)
+Completed 200 OK in 23ms (Views: 16.8ms | ActiveRecord: 0.7ms | Allocations: 28253)
+
+
+Started GET "/register" for ::1 at 2019-11-22 17:42:03 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.7ms | Allocations: 628)
+Completed 200 OK in 27ms (Views: 19.1ms | ActiveRecord: 1.1ms | Allocations: 28215)
+
+
+Started POST "/register" for ::1 at 2019-11-22 17:42:11 -0600
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"+9dbFFbuenklsQlXT0NnB7mnJNvVkuPLJXlrFK98mh9bjI5PYYxjmBHIpVRdVtTvhA/114umwKOiQdPeVOav/A==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 23ms (ActiveRecord: 1.5ms | Allocations: 11322)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:15:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:42:19 -0600
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"+9dbFFbuenklsQlXT0NnB7mnJNvVkuPLJXlrFK98mh9bjI5PYYxjmBHIpVRdVtTvhA/114umwKOiQdPeVOav/A==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R 0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.1ms | Allocations: 3329)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:15:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:44:47 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"+9dbFFbuenklsQlXT0NnB7mnJNvVkuPLJXlrFK98mh9bjI5PYYxjmBHIpVRdVtTvhA/114umwKOiQdPeVOav/A==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R 0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.2ms | Allocations: 15603)
+
+
+  
+NoMethodError (undefined method `province=' for #<Customer:0x00005564ed473338>
+Did you mean?  Province=
+               Province
+               Province_id=
+               Province_id):
+  
+app/controllers/customers_controller.rb:15:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:45:21 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"+9dbFFbuenklsQlXT0NnB7mnJNvVkuPLJXlrFK98mh9bjI5PYYxjmBHIpVRdVtTvhA/114umwKOiQdPeVOav/A==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R 0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.3ms | Allocations: 15611)
+
+
+  
+NoMethodError (undefined method `province_id=' for #<Customer:0x00007f6ca8f76270>
+Did you mean?  Province_id=
+               Province_id
+               Province_id?
+               Province=):
+  
+app/controllers/customers_controller.rb:15:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:46:00 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"+9dbFFbuenklsQlXT0NnB7mnJNvVkuPLJXlrFK98mh9bjI5PYYxjmBHIpVRdVtTvhA/114umwKOiQdPeVOav/A==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R 0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.4ms | Allocations: 15613)
+
+
+  
+NoMethodError (undefined method `province=' for #<Customer:0x00007f6cb0f59e60>
+Did you mean?  Province=
+               Province
+               Province_id=
+               Province_id):
+  
+app/controllers/customers_controller.rb:15:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:47:49 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"+9dbFFbuenklsQlXT0NnB7mnJNvVkuPLJXlrFK98mh9bjI5PYYxjmBHIpVRdVtTvhA/114umwKOiQdPeVOav/A==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R 0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 18ms (ActiveRecord: 1.2ms | Allocations: 14980)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:17:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:49:36 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"+9dbFFbuenklsQlXT0NnB7mnJNvVkuPLJXlrFK98mh9bjI5PYYxjmBHIpVRdVtTvhA/114umwKOiQdPeVOav/A==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R 0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 16ms (ActiveRecord: 1.1ms | Allocations: 14980)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:17:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:49:49 -0600
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"+9dbFFbuenklsQlXT0NnB7mnJNvVkuPLJXlrFK98mh9bjI5PYYxjmBHIpVRdVtTvhA/114umwKOiQdPeVOav/A==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.2ms | Allocations: 3770)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist, Postal code is invalid):
+  
+app/controllers/customers_controller.rb:17:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:50:49 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"+9dbFFbuenklsQlXT0NnB7mnJNvVkuPLJXlrFK98mh9bjI5PYYxjmBHIpVRdVtTvhA/114umwKOiQdPeVOav/A==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 16ms (ActiveRecord: 1.2ms | Allocations: 14067)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:18:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:51:17 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"+9dbFFbuenklsQlXT0NnB7mnJNvVkuPLJXlrFK98mh9bjI5PYYxjmBHIpVRdVtTvhA/114umwKOiQdPeVOav/A==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 1.1ms | Allocations: 99068)
+
+
+  
+NoMethodError (undefined method `echo' for #<CustomersController:0x00007f6ca8d05fe0>):
+  
+app/controllers/customers_controller.rb:17:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:51:29 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"+9dbFFbuenklsQlXT0NnB7mnJNvVkuPLJXlrFK98mh9bjI5PYYxjmBHIpVRdVtTvhA/114umwKOiQdPeVOav/A==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 19ms (ActiveRecord: 1.3ms | Allocations: 14066)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:18:in `register'
+Started GET "/admin" for ::1 at 2019-11-22 17:51:48 -0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb (Duration: 66.2ms | Allocations: 117888)
+Completed 200 OK in 81ms (Views: 67.6ms | ActiveRecord: 1.0ms | Allocations: 126973)
+
+
+Started GET "/admin/provinces" for ::1 at 2019-11-22 17:51:51 -0600
+Processing by Admin::ProvincesController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "provinces" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (Duration: 132.6ms | Allocations: 133586)
+Completed 200 OK in 144ms (Views: 135.0ms | ActiveRecord: 1.5ms | Allocations: 138072)
+
+
+Started GET "/admin/provinces/new" for ::1 at 2019-11-22 17:51:57 -0600
+Processing by Admin::ProvincesController#new as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb (Duration: 119.6ms | Allocations: 125551)
+Completed 200 OK in 129ms (Views: 120.9ms | ActiveRecord: 0.3ms | Allocations: 132341)
+
+
+Started POST "/admin/provinces" for ::1 at 2019-11-22 17:52:01 -0600
+Processing by Admin::ProvincesController#create as HTML
+  Parameters: {"authenticity_token"=>"yTh7qBAtgpXW5pTCud0wY8lYgXzVbTI6lhDza0zVmP1pY67zJ0+bdOKfOMGryIOL9PBQcItZEVIRKEuht0+tHg==", "province"=>{"code"=>"MB", "pst"=>"", "hst"=>""}, "commit"=>"Create Province"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProvince Create (0.4ms)[0m  [1m[32mINSERT INTO "provinces" ("code", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["code", "MB"], ["created_at", "2019-11-22 23:52:01.820225"], ["updated_at", "2019-11-22 23:52:01.820225"]]
+  [1m[35m (113.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/provinces/1
+Completed 302 Found in 137ms (ActiveRecord: 114.6ms | Allocations: 12673)
+
+
+Started GET "/admin/provinces/1" for ::1 at 2019-11-22 17:52:01 -0600
+Processing by Admin::ProvincesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProvince Load (0.1ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Province"], ["resource_id", 1], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Province"], ["resource_id", 1], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb (Duration: 207.7ms | Allocations: 139914)
+Completed 200 OK in 214ms (Views: 208.1ms | ActiveRecord: 1.5ms | Allocations: 144472)
+
+
+Started GET "/register" for ::1 at 2019-11-22 17:52:24 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.8ms | Allocations: 584)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.1ms | Allocations: 24857)
+
+
+Started GET "/register" for ::1 at 2019-11-22 17:52:25 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.8ms | Allocations: 571)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.2ms | Allocations: 24679)
+
+
+Started POST "/register" for ::1 at 2019-11-22 17:52:32 -0600
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 5ms (ActiveRecord: 0.2ms | Allocations: 2863)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:18:in `register'
+  [1m[36mProvince Load (0.3ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/register" for ::1 at 2019-11-22 17:53:09 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 17ms (ActiveRecord: 1.2ms | Allocations: 14047)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:18:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:54:25 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 3.2ms | Allocations: 12002)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'province_id' for Customer.):
+  
+app/controllers/customers_controller.rb:8:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:54:39 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 17ms (ActiveRecord: 1.2ms | Allocations: 14165)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:19:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:54:59 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mProvince Load (0.1ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces" ORDER BY "provinces"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:6:in `register'
+Completed 422 Unprocessable Entity in 22ms (ActiveRecord: 2.0ms | Allocations: 18621)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:19:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:55:40 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.8ms | Allocations: 5070)
+
+
+  
+NoMethodError (undefined method `log' for nil:NilClass):
+  
+app/controllers/customers_controller.rb:8:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:55:54 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 15ms (ActiveRecord: 1.1ms | Allocations: 14181)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:20:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:56:29 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 16ms (ActiveRecord: 1.3ms | Allocations: 14148)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:20:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:57:47 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 16ms (ActiveRecord: 1.2ms | Allocations: 14149)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:20:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:57:49 -0600
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.2ms | Allocations: 3005)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:20:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:58:12 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 16ms (ActiveRecord: 1.2ms | Allocations: 14182)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:20:in `register'
+
+ActionView::Template::Error: SQLite3::SQLException: no such column: province_id
+	from /usr/local/lib/ruby/gems/2.6.0/gems/sqlite3-1.4.1/lib/sqlite3/database.rb:147:in `initialize'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/sqlite3-1.4.1/lib/sqlite3/database.rb:147:in `new'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/sqlite3-1.4.1/lib/sqlite3/database.rb:147:in `prepare'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/sqlite3/database_statements.rb:43:in `block (2 levels) in exec_query'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/dependencies/interlock.rb:48:in `block in permit_concurrent_loads'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/dependencies/interlock.rb:47:in `permit_concurrent_loads'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/sqlite3/database_statements.rb:40:in `block in exec_query'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/abstract_adapter.rb:718:in `block (2 levels) in log'
+	from /usr/local/lib/ruby/2.6.0/monitor.rb:235:in `mon_synchronize'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/abstract_adapter.rb:717:in `block in log'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/abstract_adapter.rb:708:in `log'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/sqlite3/database_statements.rb:39:in `exec_query'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/abstract/database_statements.rb:487:in `select'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/abstract/database_statements.rb:70:in `select_all'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:105:in `block in select_all'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:123:in `block in cache_sql'
+	from /usr/local/lib/ruby/2.6.0/monitor.rb:235:in `mon_synchronize'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:114:in `cache_sql'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/connection_adapters/abstract/query_cache.rb:105:in `select_all'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/querying.rb:46:in `find_by_sql'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/relation.rb:810:in `block in exec_queries'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/relation.rb:828:in `skip_query_cache_if_necessary'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/relation.rb:797:in `exec_queries'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/relation.rb:615:in `load'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/relation.rb:250:in `records'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-6.0.1/lib/active_record/relation.rb:699:in `blank?'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/core_ext/object/blank.rb:26:in `present?'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/view.rb:15:in `only_on_regular_page'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/templates/index.html.erb:10:in `__usr_local_lib_ruby_gems_______gems_web_console_______lib_web_console_templates_index_html_erb___3370010776250168703_70052213223780'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/base.rb:274:in `_run'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/template.rb:185:in `block in render'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/notifications.rb:182:in `instrument'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/template.rb:386:in `instrument_render_template'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/template.rb:183:in `render'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/renderer/template_renderer.rb:59:in `block (2 levels) in render_template'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/renderer/abstract_renderer.rb:89:in `block in instrument'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/notifications.rb:180:in `instrument'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/renderer/abstract_renderer.rb:88:in `instrument'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/renderer/template_renderer.rb:58:in `block in render_template'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/renderer/template_renderer.rb:66:in `render_with_layout'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/renderer/template_renderer.rb:57:in `render_template'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/renderer/template_renderer.rb:13:in `render'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/renderer/renderer.rb:61:in `render_template_to_object'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/renderer/renderer.rb:29:in `render_to_object'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/renderer/renderer.rb:22:in `render'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/helpers/rendering_helper.rb:34:in `block in render'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/base.rb:304:in `in_rendering_context'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionview-6.0.1/lib/action_view/helpers/rendering_helper.rb:30:in `render'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/view.rb:42:in `block in render'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/logger_silence.rb:36:in `silence'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/logger.rb:64:in `block (3 levels) in broadcast'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/logger_silence.rb:36:in `silence'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/logger.rb:62:in `block (2 levels) in broadcast'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/view.rb:42:in `render'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/template.rb:21:in `render'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:35:in `block in call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionpack-6.0.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/rack/logger.rb:38:in `call_app'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/tagged_logging.rb:80:in `tagged'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/rack/logger.rb:26:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionpack-6.0.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionpack-6.0.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/method_override.rb:22:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/runtime.rb:22:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/activesupport-6.0.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionpack-6.0.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionpack-6.0.1/lib/action_dispatch/middleware/static.rb:126:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/rack-2.0.7/lib/rack/sendfile.rb:111:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/actionpack-6.0.1/lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/webpacker-4.0.7/lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/engine.rb:526:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/puma-3.12.1/lib/puma/configuration.rb:227:in `call'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/puma-3.12.1/lib/puma/server.rb:660:in `handle_request'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/puma-3.12.1/lib/puma/server.rb:474:in `process_client'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/puma-3.12.1/lib/puma/server.rb:334:in `block in run'
+	from /usr/local/lib/ruby/gems/2.6.0/gems/puma-3.12.1/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/register" for ::1 at 2019-11-22 17:58:34 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 422 Unprocessable Entity in 17ms (ActiveRecord: 1.4ms | Allocations: 14181)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:19:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:59:25 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE (code = '%MB%')[0m
+  ↳ app/controllers/customers_controller.rb:6:in `register'
+Completed 422 Unprocessable Entity in 17ms (ActiveRecord: 1.4ms | Allocations: 15084)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:19:in `register'
+Started POST "/register" for ::1 at 2019-11-22 17:59:40 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE (code = '%MB%')[0m
+  ↳ app/controllers/customers_controller.rb:6:in `register'
+Completed 422 Unprocessable Entity in 19ms (ActiveRecord: 1.5ms | Allocations: 15083)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Province must exist):
+  
+app/controllers/customers_controller.rb:20:in `register'
+Started POST "/register" for ::1 at 2019-11-22 18:00:38 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mProvince Load (0.1ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces" WHERE (code = '%MB%') ORDER BY "provinces"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:5:in `register'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.3ms | Allocations: 6110)
+
+
+  
+NoMethodError (undefined method `pluck' for nil:NilClass):
+  
+app/controllers/customers_controller.rb:5:in `register'
+Started POST "/register" for ::1 at 2019-11-22 18:01:17 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.8ms | Allocations: 4421)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/customers_controller.rb:5:in `register'
+Started POST "/register" for ::1 at 2019-11-22 18:01:52 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.8ms | Allocations: 4421)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/customers_controller.rb:5:in `register'
+Started POST "/register" for ::1 at 2019-11-22 18:03:07 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 0.8ms | Allocations: 89884)
+
+
+  
+NoMethodError (undefined method `where' for #<CustomersController:0x00007f6cb1514df0>
+Did you mean?  when):
+  
+app/controllers/customers_controller.rb:5:in `register'
+Started POST "/register" for ::1 at 2019-11-22 18:03:20 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"vrxWzqBlXLAvXQzIe/HPSLxY00Jcb/JX1wUfq9pABwEe54OVlwdFURskoMtp5HyggfACTgJb0T9QPadhIdoy4g==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"Daigle", "address"=>"980 Grosvenor Ave", "postal_code"=>"R3R0R2", "province"=>"MB", "card_number"=>"24122525152", "password"=>"[FILTERED]", "commit"=>"Register Customer"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE "provinces"."code" = ?[0m  [["code", "MB"]]
+  ↳ app/controllers/customers_controller.rb:5:in `register'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:12:in `register'
+  [1m[36mProvince Load (0.1ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:12:in `register'
+  [1m[36mCustomer Create (0.2ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "address", "postal_code", "email", "card_number", "password", "Province_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rachel"], ["last_name", "Daigle"], ["address", "980 Grosvenor Ave"], ["postal_code", "R3R0R2"], ["email", "churzed@gmail.com"], ["card_number", "24122525152"], ["password", "password"], ["Province_id", 1], ["created_at", "2019-11-23 00:03:20.976409"], ["updated_at", "2019-11-23 00:03:20.976409"]]
+  ↳ app/controllers/customers_controller.rb:12:in `register'
+  [1m[35m (99.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers_controller.rb:12:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.1ms | Allocations: 617)
+Completed 200 OK in 157ms (Views: 23.4ms | ActiveRecord: 101.8ms | Allocations: 46162)
+
+
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/register" for ::1 at 2019-11-22 18:05:38 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1027)
+Completed 200 OK in 26ms (Views: 20.0ms | ActiveRecord: 0.7ms | Allocations: 29874)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:05:41 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 10.8ms | Allocations: 3944)
+Completed 200 OK in 36ms (Views: 31.7ms | ActiveRecord: 1.1ms | Allocations: 29024)
+
+
+Started GET "/contact" for ::1 at 2019-11-22 18:05:42 -0600
+Processing by PagesController#contact as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/contact.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."contact" FROM "pages"[0m
+  ↳ app/views/pages/contact.html.erb:3
+  Rendered pages/contact.html.erb within layouts/application (Duration: 1.1ms | Allocations: 725)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms | Allocations: 25014)
+
+
+Started GET "/contact" for ::1 at 2019-11-22 18:09:34 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/r/Documents/term5/full_stack/ecom_project/app/controllers/application_controller.rb:23: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/application_controller.rb:23: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:23: syntax error, unexpected end-of-input, expecting end
+app/controllers/application_controller.rb:23: syntax error, unexpected end-of-input, expecting end
+app/controllers/pages_controller.rb:1:in `<main>'
+Started GET "/contact" for ::1 at 2019-11-22 18:09:44 -0600
+Started GET "/about" for ::1 at 2019-11-22 18:09:46 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#contact as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/contact.html.erb within layouts/application
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."contact" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  ↳ app/views/pages/contact.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4680)
+  Rendered pages/contact.html.erb within layouts/application (Duration: 7.8ms | Allocations: 4759)
+Completed 200 OK in 49ms (Views: 45.1ms | ActiveRecord: 0.8ms | Allocations: 53603)
+
+
+Completed 200 OK in 58ms (Views: 48.4ms | ActiveRecord: 1.0ms | Allocations: 58218)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:10:05 -0600
+Started GET "/about" for ::1 at 2019-11-22 18:10:28 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#about as HTML
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  ↳ app/views/pages/about.html.erb:3
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  Rendered pages/about.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3969)
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.5ms | Allocations: 870)
+Completed 200 OK in 84ms (Views: 75.1ms | ActiveRecord: 1.5ms | Allocations: 50049)
+
+
+Completed 200 OK in 86ms (Views: 79.7ms | ActiveRecord: 0.3ms | Allocations: 54892)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:10:30 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.8ms | Allocations: 590)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.2ms | Allocations: 24740)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:10:31 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 2.1ms | Allocations: 590)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.3ms | Allocations: 24715)
+
+
+Started GET "/contact" for ::1 at 2019-11-22 18:10:32 -0600
+Processing by PagesController#contact as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/contact.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."contact" FROM "pages"[0m
+  ↳ app/views/pages/contact.html.erb:3
+  Rendered pages/contact.html.erb within layouts/application (Duration: 1.2ms | Allocations: 597)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.4ms | Allocations: 24742)
+
+
+Started GET "/" for ::1 at 2019-11-22 18:10:32 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:27:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 2.8ms | Allocations: 2078)
+  Rendered products/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 12038)
+Completed 200 OK in 35ms (Views: 29.2ms | ActiveRecord: 1.2ms | Allocations: 38949)
+
+
+Started GET "/shopping_bags" for ::1 at 2019-11-22 18:10:33 -0600
+Processing by ShoppingBagsController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering shopping_bags/index.html.erb within layouts/application
+  [1m[36mCACHE ShoppingBag Load (0.0ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `current_bag'
+  [1m[36mShoppingItem Load (0.2ms)[0m  [1m[34mSELECT "shopping_items".* FROM "shopping_items" WHERE "shopping_items"."shopping_bag_id" = ?[0m  [["shopping_bag_id", 34]]
+  ↳ app/models/shopping_bag.rb:27:in `total_price'
+  Rendered shopping_bags/index.html.erb within layouts/application (Duration: 45.6ms | Allocations: 4012)
+Completed 200 OK in 75ms (Views: 71.9ms | ActiveRecord: 0.9ms | Allocations: 28951)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:10:33 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.3ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 2.2ms | Allocations: 590)
+Completed 200 OK in 35ms (Views: 31.2ms | ActiveRecord: 0.5ms | Allocations: 24734)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:11:13 -0600
+Started GET "/about" for ::1 at 2019-11-22 18:11:20 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#about as HTML
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  Rendered pages/about.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3989)
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 3.9ms | Allocations: 3916)
+Completed 500 Internal Server Error in 676ms (ActiveRecord: 1.2ms | Allocations: 435739)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:11:21 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionView::Template::Error (undefined local variable or method `current_customer' for #<#<Class:0x00007f6c9aff6e38>:0x00007f6c9aff4228>
+Did you mean?  current_admin_user):
+    27:   </div>
+    28: 
+    29:    <% if session[:customer_id] %>
+    30:  <p>Logged In As: <%= current_customer %></p>
+    31:  <% end %>
+    32: 
+    33: </div>
+  
+app/views/layouts/application.html.erb:30
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.8ms | Allocations: 598)
+Completed 500 Internal Server Error in 1030ms (ActiveRecord: 0.2ms | Allocations: 661293)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_customer' for #<#<Class:0x00007f6c9aff6e38>:0x00007f6c9b003f48>
+Did you mean?  current_admin_user):
+    27:   </div>
+    28: 
+    29:    <% if session[:customer_id] %>
+    30:  <p>Logged In As: <%= current_customer %></p>
+    31:  <% end %>
+    32: 
+    33: </div>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/shopping_bags" for ::1 at 2019-11-22 18:11:22 -0600
+Completed 500 Internal Server Error in 784ms (ActiveRecord: 0.3ms | Allocations: 688525)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionView::Template::Error (undefined local variable or method `current_customer' for #<#<Class:0x00007f6c9aff6e38>:0x00005564ee5d2200>
+Did you mean?  current_admin_user):
+    27:   </div>
+    28: 
+    29:    <% if session[:customer_id] %>
+    30:  <p>Logged In As: <%= current_customer %></p>
+    31:  <% end %>
+    32: 
+    33: </div>
+  
+app/views/layouts/application.html.erb:30
+Processing by ShoppingBagsController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering shopping_bags/index.html.erb within layouts/application
+  [1m[36mCACHE ShoppingBag Load (0.0ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `current_bag'
+  [1m[36mShoppingItem Load (0.2ms)[0m  [1m[34mSELECT "shopping_items".* FROM "shopping_items" WHERE "shopping_items"."shopping_bag_id" = ?[0m  [["shopping_bag_id", 34]]
+  ↳ app/models/shopping_bag.rb:27:in `total_price'
+  Rendered shopping_bags/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 11076)
+Completed 500 Internal Server Error in 540ms (ActiveRecord: 0.6ms | Allocations: 341091)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_customer' for #<#<Class:0x00007f6ca90795f0>:0x00007f6ca90838e8>
+Did you mean?  current_admin_user):
+    27:   </div>
+    28: 
+    29:    <% if session[:customer_id] %>
+    30:  <p>Logged In As: <%= current_customer %></p>
+    31:  <% end %>
+    32: 
+    33: </div>
+  
+app/views/layouts/application.html.erb:30
+Started GET "/shopping_bags" for ::1 at 2019-11-22 18:11:30 -0600
+Processing by ShoppingBagsController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering shopping_bags/index.html.erb within layouts/application
+  [1m[36mCACHE ShoppingBag Load (0.0ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `current_bag'
+  [1m[36mShoppingItem Load (0.1ms)[0m  [1m[34mSELECT "shopping_items".* FROM "shopping_items" WHERE "shopping_items"."shopping_bag_id" = ?[0m  [["shopping_bag_id", 34]]
+  ↳ app/models/shopping_bag.rb:27:in `total_price'
+  Rendered shopping_bags/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1496)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.3ms | Allocations: 26999)
+
+
+Started GET "/shopping_bags" for ::1 at 2019-11-22 18:11:31 -0600
+Processing by ShoppingBagsController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering shopping_bags/index.html.erb within layouts/application
+  [1m[36mCACHE ShoppingBag Load (0.0ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `current_bag'
+  [1m[36mShoppingItem Load (0.1ms)[0m  [1m[34mSELECT "shopping_items".* FROM "shopping_items" WHERE "shopping_items"."shopping_bag_id" = ?[0m  [["shopping_bag_id", 34]]
+  ↳ app/models/shopping_bag.rb:27:in `total_price'
+  Rendered shopping_bags/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1168)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.3ms | Allocations: 25292)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:11:32 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.8ms | Allocations: 724)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.3ms | Allocations: 25783)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:12:49 -0600
+Started GET "/about" for ::1 at 2019-11-22 18:13:10 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Started GET "/" for ::1 at 2019-11-22 18:13:10 -0600
+Started GET "/about" for ::1 at 2019-11-22 18:13:10 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.3ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4492)
+  Rendered pages/about.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4426)
+Completed 200 OK in 47ms (Views: 39.7ms | ActiveRecord: 1.0ms | Allocations: 57229)
+
+
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.6ms | Allocations: 53077)
+
+
+Started GET "/dreamtypes" for ::1 at 2019-11-22 18:13:18 -0600
+Processing by DreamtypesController#index as HTML
+  [1m[36mShoppingBag Load (0.3ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering dreamtypes/index.html.erb within layouts/application
+  [1m[36mDreamtype Load (0.3ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/dreamtypes/index.html.erb:1
+  Rendered collection of dreamtypes/_dreamtype.html.erb [2 times] (Duration: 7.5ms | Allocations: 437)
+  Rendered dreamtypes/index.html.erb within layouts/application (Duration: 45.1ms | Allocations: 6125)
+Completed 200 OK in 103ms (Views: 97.5ms | ActiveRecord: 1.3ms | Allocations: 31272)
+
+
+Started GET "/contact" for ::1 at 2019-11-22 18:13:19 -0600
+Processing by PagesController#contact as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/contact.html.erb within layouts/application
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT "pages"."contact" FROM "pages"[0m
+  ↳ app/views/pages/contact.html.erb:3
+  Rendered pages/contact.html.erb within layouts/application (Duration: 3.6ms | Allocations: 736)
+Completed 200 OK in 29ms (Views: 24.9ms | ActiveRecord: 0.6ms | Allocations: 25042)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:13:20 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.2ms | Allocations: 602)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.4ms | Allocations: 24750)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:13:47 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 1.4ms | Allocations: 715)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.2ms | Allocations: 26284)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:14:17 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/contact" for ::1 at 2019-11-22 18:14:17 -0600
+Started GET "/about" for ::1 at 2019-11-22 18:14:17 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+Processing by ProductsController#index as HTML
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:27:in `index'
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering products/index.html.erb within layouts/application
+  ↳ app/views/pages/about.html.erb:3
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [3 times] (Duration: 3.2ms | Allocations: 2077)
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  Rendered products/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 15115)
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 20.1ms | Allocations: 15655)
+  Rendered pages/about.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1371)
+Completed 200 OK in 82ms (Views: 73.1ms | ActiveRecord: 1.3ms | Allocations: 86072)
+
+
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 0.2ms | Allocations: 87544)
+
+
+Completed 200 OK in 86ms (Views: 79.5ms | ActiveRecord: 1.2ms | Allocations: 93524)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:15:45 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/about" for ::1 at 2019-11-22 18:15:46 -0600
+Processing by PagesController#about as HTML
+Started GET "/about" for ::1 at 2019-11-22 18:15:46 -0600
+Processing by PagesController#contact as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 4.8ms | Allocations: 3737)
+Processing by PagesController#about as HTML
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/contact.html.erb within layouts/application
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."contact" FROM "pages"[0m
+  ↳ app/views/pages/contact.html.erb:3
+  Rendered pages/contact.html.erb within layouts/application (Duration: 4.3ms | Allocations: 4611)
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 3.9ms | Allocations: 4394)
+Completed 200 OK in 73ms (Views: 63.9ms | ActiveRecord: 1.5ms | Allocations: 79599)
+
+
+Completed 200 OK in 72ms (Views: 60.0ms | ActiveRecord: 0.3ms | Allocations: 79081)
+
+
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 0.3ms | Allocations: 73577)
+
+
+Started GET "/about" for ::1 at 2019-11-22 18:17:08 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/about" for ::1 at 2019-11-22 18:17:08 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#about as HTML
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#about as HTML
+Started GET "/about" for ::1 at 2019-11-22 18:17:08 -0600
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering pages/about.html.erb within layouts/application
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 7.4ms | Allocations: 4912)
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 9.8ms | Allocations: 6078)
+  Rendered pages/about.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1375)
+Completed 200 OK in 101ms (Views: 97.0ms | ActiveRecord: 0.4ms | Allocations: 74836)
+
+
+Completed 200 OK in 114ms (Views: 107.0ms | ActiveRecord: 1.4ms | Allocations: 83932)
+
+
+Completed 200 OK in 118ms (Views: 103.7ms | ActiveRecord: 0.3ms | Allocations: 80299)
+
+
+Started GET "/register" for ::1 at 2019-11-22 18:17:49 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/about" for ::1 at 2019-11-22 18:17:50 -0600
+Processing by PagesController#about as HTML
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+Processing by CustomersController#register as HTML
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4247)
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."about" FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendering customers/register.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 6.3ms | Allocations: 4677)
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1629)
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 0.2ms | Allocations: 71316)
+
+
+Completed 200 OK in 66ms (Views: 62.3ms | ActiveRecord: 0.2ms | Allocations: 78624)
+
+
+Completed 200 OK in 78ms (Views: 65.1ms | ActiveRecord: 1.3ms | Allocations: 86148)
+
+
