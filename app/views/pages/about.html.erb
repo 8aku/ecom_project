@@ -2,4 +2,6 @@
 
 <% @about.each do |content| %>
 <p><%= content.about.html_safe %></p>
+
+<%= image_tag(content.about_photo.variant(resize_to_limit: [500, 500])) if content.about_photo.attached? %>
 <% end %>

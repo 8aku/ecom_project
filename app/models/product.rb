@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :dreamtype
+  has_many :order_details
 
    mount_uploader :image, ImageUploader
 

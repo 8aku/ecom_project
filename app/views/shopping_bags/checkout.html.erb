@@ -1,0 +1,46 @@
+<p>Order Details</p>
+
+<%= form_for shopping_bags_url, :url => checkout_post_url, :html => { :method => :post } do %>
+<div>
+<%= @customer.first_name %>
+</div>
+<div>
+<%= @customer.address %>
+</div>
+<div>
+<%= @customer.Province.gst %>
+</div>
+<div>
+<%= @customer.Province.hst %>
+</div>
+<div>
+<%= @customer.Province.pst %>
+</div>
+
+<div>
+<%= @customer.Province.pst %>
+</div>
+
+ <% current_bag.shopping_items.each do |item| %>
+ <%= item.product.name %>
+  <%= item.quantity %>
+   <%= item.product.price_per_unit %>
+   <% end %>
+
+<div>
+   Cart Total Before Tax: <%= number_to_currency(current_bag.total_price) %>
+</div>
+
+<div>
+	 <input name="tax_total" type="hidden" value="<%= @total_cost %>" />
+   Cart Total With Tax: <%= number_to_currency(@total_cost) %>
+</div>
+
+<% if @errors %>
+<% @errors.each do |msg| %>
+      <p class = "red"><%= msg %></p>
+   <% end %>
+<% end %>
+
+<%= submit_tag 'PLACE ORDER', name: nil, class: "btn btn-light" %>
+<% end %>

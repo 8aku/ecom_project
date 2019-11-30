@@ -1,0 +1,21 @@
+<%= form_for customers_url, :url => login_post_url, :html => { :method => :post } do %>
+<p>
+	<%= label_tag(:email, "EMAIL:") %>
+	<%= text_field_tag(:email) %>
+</p>
+<p>
+	<%= label_tag(:password, "PASSWORD:") %>
+	<%= text_field_tag(:password) %>
+</p>
+
+
+<% if @error %>
+     <%= @error %></p>
+   <% end %>
+
+<%= submit_tag 'LOGIN', name: nil, class: "btn btn-light" %>
+
+<div>
+<%= link_to "NEW MEMBERS REGISTER HERE", register_path %>
+<% end %>
+</div>

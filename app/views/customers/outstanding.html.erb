@@ -1,0 +1,30 @@
+<h1>Customer Information</h1>
+
+<%= image_tag(@customer.personal_photo.variant(resize_to_limit: [200, 200])) if @customer.personal_photo.attached? %>
+
+<div>
+Name: <%= @customer.first_name %> <%= @customer.last_name %> 
+</div>
+<div>
+Address: <%= @customer.address %>
+</div>
+<div>
+Province: <%= @customer.Province.code %>
+</div>
+<div>
+GST: <%= @customer.Province.gst %>
+</div>
+<div>
+HST: <%= @customer.Province.hst %>
+</div>
+<div>
+PST: <%= @customer.Province.pst %>
+</div>
+
+<% @orders.each do |order| %>
+<h3>Order Number: <%= order.id %></h3>
+<% order.order_details.each do |details| %>
+				<h5>Quantity On Order: <%= details.quantity %></h5>
+				<h5>Product Name: <%= details.product.name %></h5>
+<% end %>
+<% end %>

@@ -18,7 +18,13 @@
         <ul><%= link_to "Contact", contact_path %></ul>
         <ul><%= link_to "All Products Listing", root_path %></ul>
         <ul><%= link_to "All Dreamtypes Listing", dreamtypes_path %></ul>
-                <ul><%= link_to "Shopping Cart", shopping_bags_path %></ul>
+      <ul><%= link_to "Shopping Cart", shopping_bags_path %></ul>
+         <% if !session[:customer_name] %>
+      <ul><%= link_to "Login", login_url %></ul>
+      <% else %>
+      <ul><%= link_to "Outstanding Orders", outstanding_url %></ul>
+      <ul><%= link_to "Logout", logout_url %></ul>
+       <% end %>
       </nav>
     </div>
         <div class="col-xs-7">

@@ -1,27 +1,30 @@
-<%= form_for customers_url, :url => register_post_url, :html => { :method => :post } do %>
+<%= form_for customers_url, :url => register_post_url, :html => { :method => :post } do |form| %>
 <p>
 	<%= label_tag(:email, "Email:") %>
 	<%= text_field_tag(:email) %>
 </p>
 <p>
 	<%= label_tag(:first_name, "First Name:") %>
-	<%= text_field_tag(:first_name) %>
+	<%= text_field_tag(:first_name) %> 
 </p>
 <p>
 	<%= label_tag(:last_name, "Last Name:") %>
 	<%= text_field_tag(:last_name) %>
+
 </p>
 <p>
 	<%= label_tag(:address, "Address:") %>
 	<%= text_field_tag(:address) %>
+
 </p>
 <p>
 	<%= label_tag(:last_name, "Postal Code:") %>
 	<%= text_field_tag(:postal_code) %>
+
 </p>
 <p>
 	<%= label_tag(:province, "Province:") %>
-	<%= text_field_tag(:province) %>
+	<%= select_tag(:province, options_for_select(@codes))  %>
 </p>
 <p>
 	<%= label_tag(:card_number, "Card Number:") %>
@@ -32,6 +35,16 @@
 	<%= text_field_tag(:password) %>
 </p>
 
-	<%= text_field_tag :register %>
-  <%= submit_tag 'Register Customer', name: nil, class: "btn btn-light" %>
+<p>
+	<%= label_tag(:personal_photo, "Personal Photo:") %>
+	<%= form.file_field :personal_photo,  :name => 'personal_photo' %>
+</p> 
+
+<% if @errors %>
+<% @errors.each do |msg| %>
+      <p class = "red"><%= msg %></p>
+   <% end %>
+<% end %>
+
+<%= submit_tag 'Register Customer', name: nil, class: "btn btn-light" %>
 <% end %>

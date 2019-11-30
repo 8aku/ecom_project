@@ -1,4 +1,5 @@
 class Customer < ApplicationRecord
+	has_one_attached :personal_photo
 	belongs_to :Province
 
 	validates :first_name, presence: true

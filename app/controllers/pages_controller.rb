@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def about
-  	@about = Page.select(:about)
+  	@about = Page.all
   end
 
   def contact

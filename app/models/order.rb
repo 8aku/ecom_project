@@ -1,10 +1,9 @@
 class Order < ApplicationRecord
 belongs_to :Customer
-
-validates :order_number, presence: true
 validates :order_date, presence: true
 before_create :set_order_date
-before_save :set_fulfilled
+before_save :set_fulfilled 
+has_many :order_details
 end
 
 def set_order_date

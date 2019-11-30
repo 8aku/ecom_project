@@ -12,20 +12,20 @@
       <%= form_for product, :url => shopping_items_path, :html => { :method => :post } do |f|%>
       <%= f.hidden_field :products_id, value: product.id %>
     	<%= f.number_field :quantity, value: 1, min: 1 %>
-      <%= f.submit 'Add to Bag', class: "btn btn-dark" %>
+      <%= f.submit 'ADD TO BAG', class: "btn btn-dark" %>
       <% end %>
     <% end %>
 </div>
 	<% if show_deets %>
 	<p>
-		<%= link_to "View Details", product %>
+		<%= link_to "VIEW DETAILS", product %>
 	</p>
 	<% end %>
 	<% if show_back %>
 	<p>
-		<%= link_to "Dreamtype Listing", dreamtype_path(product.dreamtype) %>
+		<%= link_to "DREAMTYPE LISTING", dreamtype_path(product.dreamtype) %>
 	</p>
 	<p>
-		<%= link_to "Products Listing", root_path %>
+		<%= link_to "PRODUCTS LISTING", root_path %>
 	</p>
 	<% end %>
