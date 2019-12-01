@@ -1,0 +1,303 @@
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (96.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (73.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateAdminUsers (20191105193524)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191105193524"]]
+  [1m[35m (109.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActiveAdminComments (20191105193527)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_type" varchar, "resource_id" integer, "author_type" varchar, "author_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191105193527"]]
+  [1m[35m (76.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProvinces (20191105193945)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "provinces" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "code" varchar, "tax_percentage" decimal, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191105193945"]]
+  [1m[35m (97.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCustomers (20191105195216)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "customers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "address" varchar, "postal_code" varchar, "email" varchar, "phone" varchar, "card_number" varchar, "password" varchar, "provinces_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_eee0ef2099"
+FOREIGN KEY ("provinces_id")
+  REFERENCES "provinces" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_customers_on_provinces_id" ON "customers" ("provinces_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191105195216"]]
+  [1m[35m (90.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOrders (20191105195607)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "order_number" varchar, "order_date" date, "sales_tax" decimal, "total" decimal, "paid_date" date, "fulfilled" boolean, "comments" text, "customers_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_a4cda5ee73"
+FOREIGN KEY ("customers_id")
+  REFERENCES "customers" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_customers_id" ON "orders" ("customers_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191105195607"]]
+  [1m[35m (128.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDreamtypes (20191105195835)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "dreamtypes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dreamtype" varchar, "description" text, "horror_rating" integer, "notes" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191105195835"]]
+  [1m[35m (107.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProducts (20191105200127)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "image" varchar, "description" text, "stock" integer, "discount" decimal, "price_per_unit" decimal, "dreamtype_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_673eec520d"
+FOREIGN KEY ("dreamtype_id")
+  REFERENCES "dreamtypes" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_products_on_dreamtype_id" ON "products" ("dreamtype_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191105200127"]]
+  [1m[35m (149.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOrderDetails (20191105200201)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "order_details" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "quantity" integer, "discount" decimal, "total" decimal, "product_price" decimal, "order_id" integer NOT NULL, "product_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e5976611fd"
+FOREIGN KEY ("order_id")
+  REFERENCES "orders" ("id")
+, CONSTRAINT "fk_rails_4f2ac9473b"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_order_details_on_order_id" ON "order_details" ("order_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_order_details_on_product_id" ON "order_details" ("product_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191105200201"]]
+  [1m[35m (123.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNameToProducts (20191106023907)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "products" ADD "name" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191106023907"]]
+  [1m[35m (79.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePages (20191107185244)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "pages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "heading" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191107185244"]]
+  [1m[35m (73.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to PagesColumnChange (20191107193227)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apages" ("id" integer NOT NULL PRIMARY KEY, "about" text DEFAULT NULL, "heading" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "apages" ("id","about","heading","created_at","updated_at")
+                     SELECT "id","content","heading","created_at","updated_at" FROM "pages"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "pages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "pages" ("id" integer NOT NULL PRIMARY KEY, "about" text DEFAULT NULL, "heading" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "pages" ("id","about","heading","created_at","updated_at")
+                     SELECT "id","about","heading","created_at","updated_at" FROM "apages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "apages"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apages" ("id" integer NOT NULL PRIMARY KEY, "about" text DEFAULT NULL, "contact" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "apages" ("id","about","contact","created_at","updated_at")
+                     SELECT "id","about","heading","created_at","updated_at" FROM "pages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "pages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "pages" ("id" integer NOT NULL PRIMARY KEY, "about" text DEFAULT NULL, "contact" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "pages" ("id","about","contact","created_at","updated_at")
+                     SELECT "id","about","contact","created_at","updated_at" FROM "apages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "apages"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "apages" ("id" integer NOT NULL PRIMARY KEY, "about" text DEFAULT NULL, "contact" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "apages" ("id","about","contact","created_at","updated_at")
+                     SELECT "id","about","contact","created_at","updated_at" FROM "pages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "pages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "pages" ("id" integer NOT NULL PRIMARY KEY, "about" text DEFAULT NULL, "contact" text DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "pages" ("id","about","contact","created_at","updated_at")
+                     SELECT "id","about","contact","created_at","updated_at" FROM "apages"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "apages"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191107193227"]]
+  [1m[35m (52.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeProvinceColumns (20191107213901)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aprovinces" ("id" integer NOT NULL PRIMARY KEY, "code" varchar DEFAULT NULL, "pst" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aprovinces" ("id","code","pst","created_at","updated_at")
+                     SELECT "id","code","tax_percentage","created_at","updated_at" FROM "provinces"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "provinces"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "provinces" ("id" integer NOT NULL PRIMARY KEY, "code" varchar DEFAULT NULL, "pst" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "provinces" ("id","code","pst","created_at","updated_at")
+                     SELECT "id","code","pst","created_at","updated_at" FROM "aprovinces"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aprovinces"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "provinces" ADD "hst" decimal[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "orders" ADD "gst" decimal[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "orders" ADD "hst" decimal[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "order_number" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "pst" decimal DEFAULT NULL, "total" decimal DEFAULT NULL, "paid_date" date DEFAULT NULL, "fulfilled" boolean DEFAULT NULL, "comments" text DEFAULT NULL, "customers_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "gst" decimal DEFAULT NULL, "hst" decimal DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_aorders_on_customers_id" ON "aorders" ("customers_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","order_number","order_date","pst","total","paid_date","fulfilled","comments","customers_id","created_at","updated_at","gst","hst")
+                     SELECT "id","order_number","order_date","sales_tax","total","paid_date","fulfilled","comments","customers_id","created_at","updated_at","gst","hst" FROM "orders"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "order_number" varchar DEFAULT NULL, "order_date" date DEFAULT NULL, "pst" decimal DEFAULT NULL, "total" decimal DEFAULT NULL, "paid_date" date DEFAULT NULL, "fulfilled" boolean DEFAULT NULL, "comments" text DEFAULT NULL, "customers_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "gst" decimal DEFAULT NULL, "hst" decimal DEFAULT NULL, CONSTRAINT "fk_rails_a4cda5ee73"
+FOREIGN KEY ("customers_id")
+  REFERENCES "customers" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_orders_on_customers_id" ON "orders" ("customers_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","order_number","order_date","pst","total","paid_date","fulfilled","comments","customers_id","created_at","updated_at","gst","hst")
+                     SELECT "id","order_number","order_date","pst","total","paid_date","fulfilled","comments","customers_id","created_at","updated_at","gst","hst" FROM "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191107213901"]]
+  [1m[35m (127.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCarts (20191117020353)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "carts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191117020353"]]
+  [1m[35m (130.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCartItems (20191117021914)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "cart_items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "products_id" integer NOT NULL, "cart_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e9861d4ea2"
+FOREIGN KEY ("products_id")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_6cdb1f0139"
+FOREIGN KEY ("cart_id")
+  REFERENCES "carts" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_cart_items_on_products_id" ON "cart_items" ("products_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_cart_items_on_cart_id" ON "cart_items" ("cart_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191117021914"]]
+  [1m[35m (131.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddQuantityToCartItem (20191117025834)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "cart_items" ADD "quantity" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191117025834"]]
+  [1m[35m (86.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeCartsToShoppingbags (20191118150555)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "carts" RENAME TO "shopping_bags"[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191118150555"]]
+  [1m[35m (63.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeCartitemsToShoppingitems (20191118150605)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "cart_items" RENAME TO "shopping_items"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_items_on_cart_id" ON "shopping_items" ("cart_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP INDEX "index_cart_items_on_cart_id"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_items_on_products_id" ON "shopping_items" ("products_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP INDEX "index_cart_items_on_products_id"[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191118150605"]]
+  [1m[35m (75.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RenameShoppingitemFk (20191118152705)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ashopping_items" ("id" integer NOT NULL PRIMARY KEY, "products_id" integer NOT NULL, "shopping_bag_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "quantity" integer DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_ashopping_items_on_products_id" ON "ashopping_items" ("products_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_ashopping_items_on_cart_id" ON "ashopping_items" ("shopping_bag_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ashopping_items" ("id","products_id","shopping_bag_id","created_at","updated_at","quantity")
+                     SELECT "id","products_id","cart_id","created_at","updated_at","quantity" FROM "shopping_items"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "shopping_items"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "shopping_items" ("id" integer NOT NULL PRIMARY KEY, "products_id" integer NOT NULL, "shopping_bag_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "quantity" integer DEFAULT NULL, CONSTRAINT "fk_rails_c86ccce244"
+FOREIGN KEY ("shopping_bag_id")
+  REFERENCES "shopping_bags" ("id")
+, CONSTRAINT "fk_rails_1b549e23c5"
+FOREIGN KEY ("products_id")
+  REFERENCES "products" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_items_on_cart_id" ON "shopping_items" ("shopping_bag_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_items_on_products_id" ON "shopping_items" ("products_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "shopping_items" ("id","products_id","shopping_bag_id","created_at","updated_at","quantity")
+                     SELECT "id","products_id","shopping_bag_id","created_at","updated_at","quantity" FROM "ashopping_items"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ashopping_items"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shopping_items_on_shopping_bag_id" ON "shopping_items" ("shopping_bag_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP INDEX "index_shopping_items_on_cart_id"[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191118152705"]]
+  [1m[35m (93.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddGstColumn (20191123222147)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "provinces" ADD "gst" decimal[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191123222147"]]
+  [1m[35m (50.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddTaxDefault (20191123230105)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aprovinces" ("id" integer NOT NULL PRIMARY KEY, "code" varchar DEFAULT NULL, "pst" decimal DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "hst" decimal DEFAULT NULL, "gst" decimal DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aprovinces" ("id","code","pst","created_at","updated_at","hst","gst")
+                     SELECT "id","code","pst","created_at","updated_at","hst","gst" FROM "provinces"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "provinces"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "provinces" ("id" integer NOT NULL PRIMARY KEY, "code" varchar DEFAULT NULL, "pst" decimal DEFAULT 0.0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "hst" decimal DEFAULT NULL, "gst" decimal DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "provinces" ("id","code","pst","created_at","updated_at","hst","gst")
+                     SELECT "id","code","pst","created_at","updated_at","hst","gst" FROM "aprovinces"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aprovinces"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aprovinces" ("id" integer NOT NULL PRIMARY KEY, "code" varchar DEFAULT NULL, "pst" decimal DEFAULT 0.0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "hst" decimal DEFAULT NULL, "gst" decimal DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aprovinces" ("id","code","pst","created_at","updated_at","hst","gst")
+                     SELECT "id","code","pst","created_at","updated_at","hst","gst" FROM "provinces"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "provinces"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "provinces" ("id" integer NOT NULL PRIMARY KEY, "code" varchar DEFAULT NULL, "pst" decimal DEFAULT 0.0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "hst" decimal DEFAULT NULL, "gst" decimal DEFAULT 0.0)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "provinces" ("id","code","pst","created_at","updated_at","hst","gst")
+                     SELECT "id","code","pst","created_at","updated_at","hst","gst" FROM "aprovinces"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aprovinces"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aprovinces" ("id" integer NOT NULL PRIMARY KEY, "code" varchar DEFAULT NULL, "pst" decimal DEFAULT 0.0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "hst" decimal DEFAULT NULL, "gst" decimal DEFAULT 0.0)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aprovinces" ("id","code","pst","created_at","updated_at","hst","gst")
+                     SELECT "id","code","pst","created_at","updated_at","hst","gst" FROM "provinces"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "provinces"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "provinces" ("id" integer NOT NULL PRIMARY KEY, "code" varchar DEFAULT NULL, "pst" decimal DEFAULT 0.0, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "hst" decimal DEFAULT 0.0, "gst" decimal DEFAULT 0.0)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "provinces" ("id","code","pst","created_at","updated_at","hst","gst")
+                     SELECT "id","code","pst","created_at","updated_at","hst","gst" FROM "aprovinces"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aprovinces"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191123230105"]]
+  [1m[35m (74.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActiveStorageTables (20191127011429)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191127011429"]]
+  [1m[35m (92.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2019-12-01 01:17:44.382156"], ["updated_at", "2019-12-01 01:17:44.382156"]]
+  [1m[35m (55.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

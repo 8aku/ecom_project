@@ -1,6 +1,6 @@
 class Customer < ApplicationRecord
 	has_one_attached :personal_photo
-	belongs_to :Province
+	belongs_to :province
 
 	validates :first_name, presence: true
 	validates :last_name, presence: true

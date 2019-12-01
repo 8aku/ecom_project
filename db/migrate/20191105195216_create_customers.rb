@@ -9,7 +9,7 @@ class CreateCustomers < ActiveRecord::Migration[6.0]
       t.string :phone
       t.string :card_number
       t.string :password
-      t.references :Province, null: false, foreign_key: true
+      t.references :provinces, null: false, foreign_key: true
 
       t.timestamps
     end

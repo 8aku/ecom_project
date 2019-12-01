@@ -8,7 +8,7 @@ class CreateOrders < ActiveRecord::Migration[6.0]
       t.date :paid_date
       t.boolean :fulfilled
       t.text :comments
-      t.references :Customer, null: false, foreign_key: true
+      t.references :customers, null: false, foreign_key: true
 
       t.timestamps
     end

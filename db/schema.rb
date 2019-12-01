@@ -68,10 +68,10 @@ ActiveRecord::Schema.define(version: 2019_11_27_011429) do
     t.string "phone"
     t.string "card_number"
     t.string "password"
-    t.integer "Province_id", null: false
+    t.integer "provinces_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["Province_id"], name: "index_customers_on_Province_id"
+    t.index ["provinces_id"], name: "index_customers_on_provinces_id"
   end
 
   create_table "dreamtypes", force: :cascade do |t|
@@ -104,12 +104,12 @@ ActiveRecord::Schema.define(version: 2019_11_27_011429) do
     t.date "paid_date"
     t.boolean "fulfilled"
     t.text "comments"
-    t.integer "Customer_id", null: false
+    t.integer "customers_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.decimal "gst"
     t.decimal "hst"
-    t.index ["Customer_id"], name: "index_orders_on_Customer_id"
+    t.index ["customers_id"], name: "index_orders_on_customers_id"
   end
 
   create_table "pages", force: :cascade do |t|
@@ -157,10 +157,10 @@ ActiveRecord::Schema.define(version: 2019_11_27_011429) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "customers", "Provinces"
+  add_foreign_key "customers", "provinces", column: "provinces_id"
   add_foreign_key "order_details", "orders"
   add_foreign_key "order_details", "products"
-  add_foreign_key "orders", "Customers"
+  add_foreign_key "orders", "customers", column: "customers_id"
   add_foreign_key "products", "dreamtypes"
   add_foreign_key "shopping_items", "products", column: "products_id"
   add_foreign_key "shopping_items", "shopping_bags"
