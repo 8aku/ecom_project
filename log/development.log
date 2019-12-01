@@ -44682,3 +44682,29 @@ FOREIGN KEY ("blob_id")
   [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
   [1m[36mAdminUser Create (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$quxq6TIGRxrbFsEfBK1qfuy5zWeGRlEsV63tjmn1lGb21pUIdHoyW"], ["created_at", "2019-12-01 00:54:20.694439"], ["updated_at", "2019-12-01 00:54:20.694439"]]
   [1m[35m (49.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/admin/dreamtypes" for ::1 at 2019-11-30 19:40:06 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::DreamtypesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:40:06.436442"], ["updated_at", "2019-12-01 01:40:06.436442"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (91.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Completed 401 Unauthorized in 102ms (ActiveRecord: 91.5ms | Allocations: 8696)
+
+
+Started GET "/admin/login" for ::1 at 2019-11-30 19:40:06 -0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:40:06.539926"], ["updated_at", "2019-12-01 01:40:06.539926"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (54.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 3.8ms | Allocations: 5896)
+Completed 200 OK in 122ms (Views: 57.0ms | ActiveRecord: 54.9ms | Allocations: 128803)
+
+
