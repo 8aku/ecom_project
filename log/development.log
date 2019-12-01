@@ -44708,3 +44708,415 @@ Processing by ActiveAdmin::Devise::SessionsController#new as HTML
 Completed 200 OK in 122ms (Views: 57.0ms | ActiveRecord: 54.9ms | Allocations: 128803)
 
 
+Started GET "/admin/dreamtypes" for ::1 at 2019-11-30 19:54:46 -0600
+Started GET "/admin/products" for ::1 at 2019-11-30 19:54:46 -0600
+Started GET "/admin/login" for ::1 at 2019-11-30 19:54:46 -0600
+Started GET "/" for ::1 at 2019-11-30 19:54:46 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:54:46.482289"], ["updated_at", "2019-12-01 01:54:46.482289"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (59.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Admin::DreamtypesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/admin" for ::1 at 2019-11-30 19:54:46 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Completed 401 Unauthorized in 84ms (ActiveRecord: 60.1ms | Allocations: 12972)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::DashboardController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (5022.4ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:54:46.555085"], ["updated_at", "2019-12-01 01:54:46.555085"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (5015.4ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:54:51.592735"], ["updated_at", "2019-12-01 01:54:51.592735"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.3ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:54:46.559814"], ["updated_at", "2019-12-01 01:54:46.559814"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (69.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Completed 500 Internal Server Error in 5096ms (ActiveRecord: 5015.6ms | Allocations: 6005)
+
+
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.2ms | Allocations: 92)
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/application_controller.rb:9:in `rescue in set_bag'
+app/controllers/application_controller.rb:6:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 5.3ms | Allocations: 5610)
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Completed 500 Internal Server Error in 10355ms (ActiveRecord: 5022.6ms | Allocations: 408507)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/application_controller.rb:9:in `rescue in set_bag'
+app/controllers/application_controller.rb:6:in `set_bag'
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:54:57.270620"], ["updated_at", "2019-12-01 01:54:57.270620"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (70.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered products/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4436)
+Completed 200 OK in 135ms (Views: 47.9ms | ActiveRecord: 71.3ms | Allocations: 58368)
+
+
+Started GET "/" for ::1 at 2019-11-30 19:54:57 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:54:57.421525"], ["updated_at", "2019-12-01 01:54:57.421525"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (97.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered products/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1377)
+Completed 200 OK in 11051ms (Views: 919.3ms | ActiveRecord: 69.7ms | Allocations: 1025227)
+
+
+Started GET "/admin/login" for ::1 at 2019-11-30 19:54:57 -0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:54:57.618794"], ["updated_at", "2019-12-01 01:54:57.618794"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (73.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 3.4ms | Allocations: 5549)
+Completed 200 OK in 285ms (Views: 180.8ms | ActiveRecord: 97.8ms | Allocations: 164146)
+
+
+Completed 200 OK in 191ms (Views: 113.9ms | ActiveRecord: 73.6ms | Allocations: 141626)
+
+
+Started GET "/about" for ::1 at 2019-11-30 19:55:00 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1235)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.7ms | Allocations: 26422)
+
+
+Started GET "/contact" for ::1 at 2019-11-30 19:55:01 -0600
+Processing by PagesController#contact as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/contact.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."contact" FROM "pages"[0m
+  ↳ app/views/pages/contact.html.erb:3
+  Rendered pages/contact.html.erb within layouts/application (Duration: 1.7ms | Allocations: 712)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.4ms | Allocations: 25117)
+
+
+Started GET "/" for ::1 at 2019-11-30 19:55:01 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered products/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1399)
+Completed 200 OK in 30ms (Views: 25.7ms | ActiveRecord: 0.8ms | Allocations: 26228)
+
+
+Started GET "/dreamtypes" for ::1 at 2019-11-30 19:55:02 -0600
+Processing by DreamtypesController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering dreamtypes/index.html.erb within layouts/application
+  [1m[36mDreamtype Load (0.3ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/dreamtypes/index.html.erb:1
+  Rendered collection of dreamtypes/_dreamtype.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered dreamtypes/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1035)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.5ms | Allocations: 26243)
+
+
+Started GET "/shopping_bags" for ::1 at 2019-11-30 19:55:02 -0600
+Processing by ShoppingBagsController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering shopping_bags/index.html.erb within layouts/application
+  [1m[36mCACHE ShoppingBag Load (0.0ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `current_bag'
+  [1m[36mShoppingItem Load (0.3ms)[0m  [1m[34mSELECT "shopping_items".* FROM "shopping_items" WHERE "shopping_items"."shopping_bag_id" = ?[0m  [["shopping_bag_id", 6]]
+  ↳ app/models/shopping_bag.rb:27:in `total_price'
+  Rendered shopping_bags/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4033)
+Completed 200 OK in 35ms (Views: 31.4ms | ActiveRecord: 1.1ms | Allocations: 29073)
+
+
+Started GET "/dreamtypes" for ::1 at 2019-11-30 19:55:04 -0600
+Processing by DreamtypesController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering dreamtypes/index.html.erb within layouts/application
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/dreamtypes/index.html.erb:1
+  Rendered collection of dreamtypes/_dreamtype.html.erb [0 times] (Duration: 0.8ms | Allocations: 3)
+  Rendered dreamtypes/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 781)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.5ms | Allocations: 25091)
+
+
+Started GET "/" for ::1 at 2019-11-30 19:55:04 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered products/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1374)
+Completed 200 OK in 34ms (Views: 28.1ms | ActiveRecord: 0.7ms | Allocations: 26197)
+
+
+Started GET "/contact" for ::1 at 2019-11-30 19:55:05 -0600
+Processing by PagesController#contact as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/contact.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."contact" FROM "pages"[0m
+  ↳ app/views/pages/contact.html.erb:3
+  Rendered pages/contact.html.erb within layouts/application (Duration: 1.6ms | Allocations: 578)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.4ms | Allocations: 24838)
+
+
+Started GET "/about" for ::1 at 2019-11-30 19:55:06 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.9ms | Allocations: 575)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.2ms | Allocations: 24807)
+
+
+Started GET "/admin/products" for ::1 at 2019-11-30 19:55:09 -0600
+Started GET "/admin/dreamtypes/3" for ::1 at 2019-11-30 19:55:09 -0600
+Processing by Admin::DreamtypesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by Admin::ProductsController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:55:09.127539"], ["updated_at", "2019-12-01 01:55:09.127539"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Started GET "/aa" for ::1 at 2019-11-30 19:55:14 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/aa"):
+  
+actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.1) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin/dreamtypes/4" for ::1 at 2019-11-30 19:55:14 -0600
+Started GET "/admin" for ::1 at 2019-11-30 19:55:14 -0600
+Processing by Admin::DreamtypesController#show as HTML
+  [1m[36mShoppingBag Create (5017.1ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:55:09.126246"], ["updated_at", "2019-12-01 01:55:09.126246"]]
+  [1m[35m (55.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Completed 401 Unauthorized in 5120ms (ActiveRecord: 56.0ms | Allocations: 41126)
+
+
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mShoppingBag Create (0.3ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:55:14.243332"], ["updated_at", "2019-12-01 01:55:14.243332"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (57.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Completed 401 Unauthorized in 72ms (ActiveRecord: 57.8ms | Allocations: 8038)
+
+
+  [1m[36mShoppingBag Load (0.3ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Completed 401 Unauthorized in 71ms (ActiveRecord: 0.7ms | Allocations: 7725)
+
+
+Started GET "/admin/login" for ::1 at 2019-11-30 19:55:14 -0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+Completed 500 Internal Server Error in 5197ms (ActiveRecord: 5017.3ms | Allocations: 51539)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/application_controller.rb:9:in `rescue in set_bag'
+app/controllers/application_controller.rb:6:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.7ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:55:14.326662"], ["updated_at", "2019-12-01 01:55:14.326662"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (69.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 6.5ms | Allocations: 5649)
+Completed 200 OK in 451ms (Views: 142.3ms | ActiveRecord: 70.3ms | Allocations: 639045)
+
+
+Started GET "/admin/login" for ::1 at 2019-11-30 19:55:14 -0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 01:55:14.780363"], ["updated_at", "2019-12-01 01:55:14.780363"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (87.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 4.5ms | Allocations: 5543)
+Completed 200 OK in 180ms (Views: 88.2ms | ActiveRecord: 87.3ms | Allocations: 123463)
+
+
+Started GET "/admin/login" for ::1 at 2019-11-30 19:55:14 -0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 3.6ms | Allocations: 5604)
+Completed 200 OK in 72ms (Views: 70.7ms | ActiveRecord: 0.1ms | Allocations: 120546)
+
+
+Started POST "/admin/login" for ::1 at 2019-11-30 19:55:20 -0600
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Fbjtch3HxeXDko0qzTd/UPPN1kDL4i8W8wewqENTxd3yysgRvqBLTz84U1vtaMrYW/MQ3BFkumPnQF2Akc9x3w==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 125ms (ActiveRecord: 0.3ms | Allocations: 3314)
+
+
+Started GET "/admin" for ::1 at 2019-11-30 19:55:20 -0600
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/page/index.html.arb (Duration: 45.2ms | Allocations: 119423)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.2ms | Allocations: 122390)
+
+
+Started GET "/admin/pages" for ::1 at 2019-11-30 19:55:23 -0600
+Processing by Admin::PagesController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT 1 AS one FROM "pages" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs"[0m
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/index.html.arb (Duration: 72.9ms | Allocations: 134508)
+Completed 200 OK in 78ms (Views: 73.8ms | ActiveRecord: 0.9ms | Allocations: 138242)
+
+
+Started GET "/admin/pages/new" for ::1 at 2019-11-30 19:55:52 -0600
+Processing by Admin::PagesController#new as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/new.html.arb (Duration: 64.6ms | Allocations: 128428)
+Completed 200 OK in 72ms (Views: 65.3ms | ActiveRecord: 0.4ms | Allocations: 134301)
+
+
+Started POST "/admin/pages" for ::1 at 2019-11-30 19:56:07 -0600
+Processing by Admin::PagesController#create as HTML
+  Parameters: {"authenticity_token"=>"wZARFfBLBHid0tuRBgJ+4fiBf/DBp9nQUZVg2ePaFRyyOUeBenEdDSjJdPtuqO1tJolu1InoIx1sW3edtDl8Ig==", "page"=>{"about"=>"this is the about section", "contact"=>"this is the contact section"}, "commit"=>"Create Page"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPage Create (0.5ms)[0m  [1m[32mINSERT INTO "pages" ("about", "contact", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["about", "this is the about section"], ["contact", "this is the contact section"], ["created_at", "2019-12-01 01:56:07.629524"], ["updated_at", "2019-12-01 01:56:07.629524"]]
+  [1m[35m (49.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/pages/1
+Completed 302 Found in 68ms (ActiveRecord: 50.6ms | Allocations: 10392)
+
+
+Started GET "/admin/pages/1" for ::1 at 2019-11-30 19:56:07 -0600
+Processing by Admin::PagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages" WHERE "pages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Page"], ["resource_id", 1], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Page"], ["resource_id", 1], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/resource/show.html.arb (Duration: 62.6ms | Allocations: 130820)
+Completed 200 OK in 70ms (Views: 63.6ms | ActiveRecord: 0.7ms | Allocations: 135060)
+
+
