@@ -45120,3 +45120,862 @@ Processing by Admin::PagesController#show as HTML
 Completed 200 OK in 70ms (Views: 63.6ms | ActiveRecord: 0.7ms | Allocations: 135060)
 
 
+Started GET "/" for ::1 at 2019-11-30 20:00:04 -0600
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 02:00:04.216057"], ["updated_at", "2019-12-01 02:00:04.216057"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (58.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+Started GET "/admin/products" for ::1 at 2019-11-30 20:00:04 -0600
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered products/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2373)
+Processing by Admin::ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.4ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 02:00:04.290131"], ["updated_at", "2019-12-01 02:00:04.290131"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (76.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Completed 401 Unauthorized in 84ms (ActiveRecord: 77.0ms | Allocations: 4461)
+
+
+Started GET "/admin/login" for ::1 at 2019-11-30 20:00:04 -0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.3ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-01 02:00:04.383350"], ["updated_at", "2019-12-01 02:00:04.383350"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (75.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.3ms | Allocations: 92)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 6.4ms | Allocations: 5711)
+Completed 200 OK in 307ms (Views: 239.5ms | ActiveRecord: 59.3ms | Allocations: 69888)
+
+
+Started GET "/" for ::1 at 2019-11-30 20:00:04 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered products/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1680)
+Completed 200 OK in 84ms (Views: 82.0ms | ActiveRecord: 0.3ms | Allocations: 93652)
+
+
+Completed 200 OK in 243ms (Views: 160.9ms | ActiveRecord: 76.0ms | Allocations: 173175)
+
+
+Started GET "/about" for ::1 at 2019-11-30 20:00:05 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.3ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Page"], ["name", "about_photo"], ["LIMIT", 1]]
+  ↳ app/views/pages/about.html.erb:6
+  Rendered pages/about.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1618)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.9ms | Allocations: 25865)
+
+
+Started GET "/contact" for ::1 at 2019-11-30 20:00:06 -0600
+Processing by PagesController#contact as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/contact.html.erb within layouts/application
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT "pages"."contact" FROM "pages"[0m
+  ↳ app/views/pages/contact.html.erb:3
+  Rendered pages/contact.html.erb within layouts/application (Duration: 1.7ms | Allocations: 596)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.4ms | Allocations: 24829)
+
+
+Started GET "/contact" for ::1 at 2019-11-30 21:51:26 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#contact as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/contact.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages"."contact" FROM "pages"[0m
+  ↳ app/views/pages/contact.html.erb:3
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.7ms | Allocations: 598)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 24858)
+
+
+Started GET "/" for ::1 at 2019-12-02 11:45:36 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 17:45:36.779798"], ["updated_at", "2019-12-02 17:45:36.779798"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (73.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.1ms | Allocations: 3)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 5144)
+Started GET "/admin/dreamtypes" for ::1 at 2019-12-02 11:45:36 -0600
+Started GET "/admin" for ::1 at 2019-12-02 11:45:37 -0600
+Started GET "/admin/login" for ::1 at 2019-12-02 11:45:37 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/contact" for ::1 at 2019-12-02 11:45:37 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Admin::DashboardController#index as HTML
+Processing by Admin::DreamtypesController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 17:45:37.162559"], ["updated_at", "2019-12-02 17:45:37.162559"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (57.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (5014.6ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 17:45:37.163621"], ["updated_at", "2019-12-02 17:45:37.163621"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Processing by PagesController#contact as HTML
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Completed 500 Internal Server Error in 5095ms (ActiveRecord: 5014.7ms | Allocations: 14808)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/application_controller.rb:9:in `rescue in set_bag'
+app/controllers/application_controller.rb:6:in `set_bag'
+Completed 401 Unauthorized in 5090ms (ActiveRecord: 57.5ms | Allocations: 13620)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mShoppingBag Create (0.4ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 17:45:37.171986"], ["updated_at", "2019-12-02 17:45:37.171986"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (5015.3ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 17:45:42.255063"], ["updated_at", "2019-12-02 17:45:42.255063"]]
+  [1m[35m (98.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+Completed 500 Internal Server Error in 5397ms (ActiveRecord: 5015.5ms | Allocations: 400606)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/application_controller.rb:9:in `rescue in set_bag'
+app/controllers/application_controller.rb:6:in `set_bag'
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (Duration: 1.0ms | Allocations: 592)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 10.0ms | Allocations: 9048)
+Completed 200 OK in 12360ms (Views: 12264.3ms | ActiveRecord: 75.4ms | Allocations: 3483244)
+
+
+Started GET "/" for ::1 at 2019-12-02 11:45:49 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered products/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1477)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.3ms | Allocations: 42445)
+
+
+Completed 200 OK in 12081ms (Views: 1600.2ms | ActiveRecord: 100.2ms | Allocations: 3147556)
+
+
+Started GET "/admin/login" for ::1 at 2019-12-02 11:45:49 -0600
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 17:45:49.254787"], ["updated_at", "2019-12-02 17:45:49.254787"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (133.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/shared/_links.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.4.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (Duration: 9.1ms | Allocations: 5565)
+Completed 200 OK in 265ms (Views: 124.4ms | ActiveRecord: 133.7ms | Allocations: 123913)
+
+
+Started GET "/about" for ::1 at 2019-12-02 11:45:52 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Page"], ["name", "about_photo"], ["LIMIT", 1]]
+  ↳ app/views/pages/about.html.erb:6
+  Rendered pages/about.html.erb within layouts/application (Duration: 48.2ms | Allocations: 7047)
+Completed 200 OK in 68ms (Views: 64.6ms | ActiveRecord: 1.2ms | Allocations: 32154)
+
+
+Started GET "/contact" for ::1 at 2019-12-02 11:45:54 -0600
+Processing by PagesController#contact as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/contact.html.erb within layouts/application
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT "pages"."contact" FROM "pages"[0m
+  ↳ app/views/pages/contact.html.erb:3
+  Rendered pages/contact.html.erb within layouts/application (Duration: 1.9ms | Allocations: 730)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.4ms | Allocations: 25137)
+
+
+Started GET "/about" for ::1 at 2019-12-02 11:45:54 -0600
+Processing by PagesController#about as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering pages/about.html.erb within layouts/application
+  [1m[36mPage Load (0.1ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  ↳ app/views/pages/about.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Page"], ["name", "about_photo"], ["LIMIT", 1]]
+  ↳ app/views/pages/about.html.erb:6
+  Rendered pages/about.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1540)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.5ms | Allocations: 25782)
+
+
+Started GET "/admin" for ::1 at 2019-12-02 11:45:57 -0600
+Started GET "/" for ::1 at 2019-12-02 11:45:57 -0600
+Processing by ProductsController#index as HTML
+Processing by Admin::DashboardController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.3ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 17:45:57.613580"], ["updated_at", "2019-12-02 17:45:57.613580"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (70.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  [1m[36mShoppingBag Create (5011.6ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 17:45:57.614702"], ["updated_at", "2019-12-02 17:45:57.614702"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+Completed 500 Internal Server Error in 5093ms (ActiveRecord: 5011.7ms | Allocations: 8685)
+
+
+  Rendered products/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2562)
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked):
+  
+app/controllers/application_controller.rb:9:in `rescue in set_bag'
+app/controllers/application_controller.rb:6:in `set_bag'
+Completed 200 OK in 5370ms (Views: 280.0ms | ActiveRecord: 71.1ms | Allocations: 460479)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (57.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$2vkZ19nNvXj8.LTgkoxZBepzagvXsd5ciRUXd.k3tlUpsvYP9oS7a"], ["created_at", "2019-12-02 17:52:10.560392"], ["updated_at", "2019-12-02 17:52:10.560392"]]
+  [1m[35m (54.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "AbsurdDream"], ["description", "You don't know who you are. You don't know what a dream is. Tis ABSURD."], ["horror_rating", 7], ["notes", "May increase suicidal behaviour."], ["created_at", "2019-12-02 17:52:10.624442"], ["updated_at", "2019-12-02 17:52:10.624442"]]
+  [1m[35m (55.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2019-12-02 11:52:17 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.5ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered products/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1416)
+Completed 200 OK in 28ms (Views: 21.8ms | ActiveRecord: 1.0ms | Allocations: 26243)
+
+
+Started GET "/dreamtypes" for ::1 at 2019-12-02 11:52:22 -0600
+Processing by DreamtypesController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering dreamtypes/index.html.erb within layouts/application
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" LIMIT ? OFFSET ?[0m  [["LIMIT", 25], ["OFFSET", 0]]
+  ↳ app/views/dreamtypes/index.html.erb:1
+  Rendered collection of dreamtypes/_dreamtype.html.erb [1 times] (Duration: 0.8ms | Allocations: 390)
+  Rendered dreamtypes/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 5506)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.8ms | Allocations: 30655)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (58.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.1ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 1]]
+  [1m[35m (73.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$2tFQBHNWjtdCFEIyX8njFOyG2/K2NABP6kwwyS.FFLoH9RbSCJqyC"], ["created_at", "2019-12-02 17:59:02.159607"], ["updated_at", "2019-12-02 17:59:02.159607"]]
+  [1m[35m (81.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "AbsurdDream"], ["description", "You don't know who you are. You don't know what a dream is. Tis ABSURD."], ["horror_rating", 7], ["notes", "May increase suicidal behaviour."], ["created_at", "2019-12-02 17:59:02.253714"], ["updated_at", "2019-12-02 17:59:02.253714"]]
+  [1m[35m (77.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "ComfortingDream"], ["description", "Yum, a warm piece of pie. You're fine with doing ANYTHING. Extra cozy."], ["horror_rating", 2], ["notes", "Could cause weight gain."], ["created_at", "2019-12-02 17:59:02.337904"], ["updated_at", "2019-12-02 17:59:02.337904"]]
+  [1m[35m (85.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2019-12-02 11:59:09 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [0 times] (Duration: 0.0ms | Allocations: 3)
+  Rendered products/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1430)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.6ms | Allocations: 26280)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (67.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 2]]
+  [1m[35m (72.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 3]]
+  [1m[35m (72.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$1HIo6u/uHfdeupQrmlF3Pe5XN.bGsUVn6vb9wDZd7w3vnFt4WjLhG"], ["created_at", "2019-12-02 18:00:44.132829"], ["updated_at", "2019-12-02 18:00:44.132829"]]
+  [1m[35m (51.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.2ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "AbsurdDream"], ["description", "You don't know who you are. You don't know what a dream is. Tis ABSURD."], ["horror_rating", 7], ["notes", "May increase suicidal behaviour."], ["created_at", "2019-12-02 18:00:44.186870"], ["updated_at", "2019-12-02 18:00:44.186870"]]
+  [1m[35m (69.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.2ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "ComfortingDream"], ["description", "Yum, a warm piece of pie. You're fine with doing ANYTHING. Extra cozy."], ["horror_rating", 2], ["notes", "Could cause weight gain."], ["created_at", "2019-12-02 18:00:44.270700"], ["updated_at", "2019-12-02 18:00:44.270700"]]
+  [1m[35m (54.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (60.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.1ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 4]]
+  [1m[35m (66.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 5]]
+  [1m[35m (54.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$Dx5tF8ighic6Y16mZ40Bwersq8JGpJ7Ylw4HFqziPHQPaSARCnlVu"], ["created_at", "2019-12-02 18:01:27.700272"], ["updated_at", "2019-12-02 18:01:27.700272"]]
+  [1m[35m (51.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "AbsurdDream"], ["description", "You don't know who you are. You don't know what a dream is. Tis ABSURD."], ["horror_rating", 7], ["notes", "May increase suicidal behaviour."], ["created_at", "2019-12-02 18:01:27.754524"], ["updated_at", "2019-12-02 18:01:27.754524"]]
+  [1m[35m (69.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "ComfortingDream"], ["description", "Yum, a warm piece of pie. You're fine with doing ANYTHING. Extra cozy."], ["horror_rating", 2], ["notes", "Could cause weight gain."], ["created_at", "2019-12-02 18:01:27.847009"], ["updated_at", "2019-12-02 18:01:27.847009"]]
+  [1m[35m (52.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (83.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.3ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 6]]
+  [1m[35m (53.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 7]]
+  [1m[35m (71.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$iRG/HyHYaKoLkvPbuxN/j.FDV4PkuAuXiKmHCaSlSQ1QY4qIQg/oe"], ["created_at", "2019-12-02 18:02:14.579994"], ["updated_at", "2019-12-02 18:02:14.579994"]]
+  [1m[35m (71.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.2ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "AbsurdDream"], ["description", "You don't know who you are. You don't know what a dream is. Tis ABSURD."], ["horror_rating", 7], ["notes", "May increase suicidal behaviour."], ["created_at", "2019-12-02 18:02:14.654585"], ["updated_at", "2019-12-02 18:02:14.654585"]]
+  [1m[35m (71.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "ComfortingDream"], ["description", "Yum, a warm piece of pie. You're fine with doing ANYTHING. Extra cozy."], ["horror_rating", 2], ["notes", "Could cause weight gain."], ["created_at", "2019-12-02 18:02:14.731529"], ["updated_at", "2019-12-02 18:02:14.731529"]]
+  [1m[35m (52.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 6]]
+  [1m[35m (77.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.3ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 8]]
+  [1m[35m (61.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 9]]
+  [1m[35m (80.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$Gx8U2LyNUHW31Oi8.1neWuBX1PAwXyQaJdlsrDWpRYDLwYVzVS5ZC"], ["created_at", "2019-12-02 18:03:15.692652"], ["updated_at", "2019-12-02 18:03:15.692652"]]
+  [1m[35m (76.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "AbsurdDream"], ["description", "You don't know who you are. You don't know what a dream is. Tis ABSURD."], ["horror_rating", 7], ["notes", "May increase suicidal behaviour."], ["created_at", "2019-12-02 18:03:15.771764"], ["updated_at", "2019-12-02 18:03:15.771764"]]
+  [1m[35m (80.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "ComfortingDream"], ["description", "Yum, a warm piece of pie. You're fine with doing ANYTHING. Extra cozy."], ["horror_rating", 2], ["notes", "Could cause weight gain."], ["created_at", "2019-12-02 18:03:15.872582"], ["updated_at", "2019-12-02 18:03:15.872582"]]
+  [1m[35m (78.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 7]]
+  [1m[35m (64.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.3ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 10]]
+  [1m[35m (81.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 11]]
+  [1m[35m (87.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$uO9fneMs68KqyBY8jUaCGeNqcvv12rwFUEq3NvPliiqYKCkL8pipq"], ["created_at", "2019-12-02 18:05:12.102362"], ["updated_at", "2019-12-02 18:05:12.102362"]]
+  [1m[35m (58.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.2ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "AbsurdDream"], ["description", "You don't know who you are. You don't know what a dream is. Tis ABSURD."], ["horror_rating", 7], ["notes", "May increase suicidal behaviour."], ["created_at", "2019-12-02 18:05:12.163803"], ["updated_at", "2019-12-02 18:05:12.163803"]]
+  [1m[35m (77.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.4ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "ComfortingDream"], ["description", "Yum, a warm piece of pie. You're fine with doing ANYTHING. Extra cozy."], ["horror_rating", 2], ["notes", "Could cause weight gain."], ["created_at", "2019-12-02 18:05:12.256769"], ["updated_at", "2019-12-02 18:05:12.256769"]]
+  [1m[35m (60.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 8]]
+  [1m[35m (85.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 12]]
+  [1m[35m (52.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.4ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 13]]
+  [1m[35m (71.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$GroPw4B/uKLGQh0o/eGw2u8/KIlxecv4Gsd7mHCbYIpU2DADs7YZm"], ["created_at", "2019-12-02 18:05:49.210288"], ["updated_at", "2019-12-02 18:05:49.210288"]]
+  [1m[35m (67.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.2ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "AbsurdDream"], ["description", "You don't know who you are. You don't know what a dream is. Tis ABSURD."], ["horror_rating", 7], ["notes", "May increase suicidal behaviour."], ["created_at", "2019-12-02 18:05:49.280911"], ["updated_at", "2019-12-02 18:05:49.280911"]]
+  [1m[35m (77.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "ComfortingDream"], ["description", "Yum, a warm piece of pie. You're fine with doing ANYTHING. Extra cozy."], ["horror_rating", 2], ["notes", "Could cause weight gain."], ["created_at", "2019-12-02 18:05:49.373711"], ["updated_at", "2019-12-02 18:05:49.373711"]]
+  [1m[35m (60.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 9]]
+  [1m[35m (58.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.3ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 14]]
+  [1m[35m (70.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 15]]
+  [1m[35m (46.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$KJ97oakRmdRTb9w/OmUlJODk0hTsy49hLZAUUUGXf98On24f4BJ5O"], ["created_at", "2019-12-02 18:06:21.119314"], ["updated_at", "2019-12-02 18:06:21.119314"]]
+  [1m[35m (51.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.2ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "AbsurdDream"], ["description", "You don't know who you are. You don't know what a dream is. Tis ABSURD."], ["horror_rating", 7], ["notes", "May increase suicidal behaviour."], ["created_at", "2019-12-02 18:06:21.172770"], ["updated_at", "2019-12-02 18:06:21.172770"]]
+  [1m[35m (64.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "ComfortingDream"], ["description", "Yum, a warm piece of pie. You're fine with doing ANYTHING. Extra cozy."], ["horror_rating", 2], ["notes", "Could cause weight gain."], ["created_at", "2019-12-02 18:06:21.257444"], ["updated_at", "2019-12-02 18:06:21.257444"]]
+  [1m[35m (52.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 0], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:21.322923"], ["updated_at", "2019-12-02 18:06:21.322923"], ["name", "AbsurdProduct_0"]]
+  [1m[35m (79.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 1], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:21.409599"], ["updated_at", "2019-12-02 18:06:21.409599"], ["name", "AbsurdProduct_1"]]
+  [1m[35m (58.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 2], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:21.475797"], ["updated_at", "2019-12-02 18:06:21.475797"], ["name", "AbsurdProduct_2"]]
+  [1m[35m (75.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 3], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:21.557443"], ["updated_at", "2019-12-02 18:06:21.557443"], ["name", "AbsurdProduct_3"]]
+  [1m[35m (78.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 4], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:21.642402"], ["updated_at", "2019-12-02 18:06:21.642402"], ["name", "AbsurdProduct_4"]]
+  [1m[35m (59.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 5], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:21.708867"], ["updated_at", "2019-12-02 18:06:21.708867"], ["name", "AbsurdProduct_5"]]
+  [1m[35m (76.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 6], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:21.791408"], ["updated_at", "2019-12-02 18:06:21.791408"], ["name", "AbsurdProduct_6"]]
+  [1m[35m (61.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 7], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:21.859864"], ["updated_at", "2019-12-02 18:06:21.859864"], ["name", "AbsurdProduct_7"]]
+  [1m[35m (74.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 8], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:21.942369"], ["updated_at", "2019-12-02 18:06:21.942369"], ["name", "AbsurdProduct_8"]]
+  [1m[35m (97.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 9], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:22.048103"], ["updated_at", "2019-12-02 18:06:22.048103"], ["name", "AbsurdProduct_9"]]
+  [1m[35m (73.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 10], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:22.126634"], ["updated_at", "2019-12-02 18:06:22.126634"], ["name", "AbsurdProduct_10"]]
+  [1m[35m (86.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 11], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:22.220109"], ["updated_at", "2019-12-02 18:06:22.220109"], ["name", "AbsurdProduct_11"]]
+  [1m[35m (83.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 12], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:22.310781"], ["updated_at", "2019-12-02 18:06:22.310781"], ["name", "AbsurdProduct_12"]]
+  [1m[35m (68.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 13], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:22.384900"], ["updated_at", "2019-12-02 18:06:22.384900"], ["name", "AbsurdProduct_13"]]
+  [1m[35m (70.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 14], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:22.475101"], ["updated_at", "2019-12-02 18:06:22.475101"], ["name", "AbsurdProduct_14"]]
+  [1m[35m (78.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 15], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:22.561609"], ["updated_at", "2019-12-02 18:06:22.561609"], ["name", "AbsurdProduct_15"]]
+  [1m[35m (92.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.3ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 16], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:22.662181"], ["updated_at", "2019-12-02 18:06:22.662181"], ["name", "AbsurdProduct_16"]]
+  [1m[35m (98.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 17], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:22.767429"], ["updated_at", "2019-12-02 18:06:22.767429"], ["name", "AbsurdProduct_17"]]
+  [1m[35m (78.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 18], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:22.852903"], ["updated_at", "2019-12-02 18:06:22.852903"], ["name", "AbsurdProduct_18"]]
+  [1m[35m (92.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 19], ["price_per_unit", 50.0], ["dreamtype_id", 16], ["created_at", "2019-12-02 18:06:22.952590"], ["updated_at", "2019-12-02 18:06:22.952590"], ["name", "AbsurdProduct_19"]]
+  [1m[35m (92.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2019-12-02 12:06:29 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.3ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [4 times] (Duration: 10.1ms | Allocations: 5648)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/products/index.html.erb:23
+  Rendered products/index.html.erb within layouts/application (Duration: 44.5ms | Allocations: 17430)
+Completed 200 OK in 91ms (Views: 84.3ms | ActiveRecord: 2.2ms | Allocations: 42203)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 10]]
+  [1m[35m (82.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.3ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.4ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  [1m[35m (72.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  [1m[35m (79.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 3]]
+  [1m[35m (81.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 4]]
+  [1m[35m (71.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 5]]
+  [1m[35m (80.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 6]]
+  [1m[35m (80.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 7]]
+  [1m[35m (69.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 8]]
+  [1m[35m (85.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 9]]
+  [1m[35m (78.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 10]]
+  [1m[35m (70.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 11]]
+  [1m[35m (88.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 12]]
+  [1m[35m (96.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 13]]
+  [1m[35m (67.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 14]]
+  [1m[35m (64.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 15]]
+  [1m[35m (78.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 16]]
+  [1m[35m (61.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 17]]
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 18]]
+  [1m[35m (53.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 19]]
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 20]]
+  [1m[35m (54.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 16]]
+  [1m[35m (75.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 17]]
+  [1m[35m (71.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$0zvDFvEx8iIJYons3zdZDezTIxYcwNvJmXTD8Xsr7Kqz72g0BAeU6"], ["created_at", "2019-12-02 18:07:35.575471"], ["updated_at", "2019-12-02 18:07:35.575471"]]
+  [1m[35m (53.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.2ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "AbsurdDream"], ["description", "You don't know who you are. You don't know what a dream is. Tis ABSURD."], ["horror_rating", 7], ["notes", "May increase suicidal behaviour."], ["created_at", "2019-12-02 18:07:35.631329"], ["updated_at", "2019-12-02 18:07:35.631329"]]
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.4ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "ComfortingDream"], ["description", "Yum, a warm piece of pie. You're fine with doing ANYTHING. Extra cozy."], ["horror_rating", 2], ["notes", "Could cause weight gain."], ["created_at", "2019-12-02 18:07:35.707616"], ["updated_at", "2019-12-02 18:07:35.707616"]]
+  [1m[35m (69.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."id" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT "admin_users".* FROM "admin_users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 11]]
+  [1m[35m (56.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.1ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 18]]
+  [1m[35m (75.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dreamtypes" WHERE "dreamtypes"."id" = ?[0m  [["id", 19]]
+  [1m[35m (65.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$y7g/E.o6vwQiB090VB7zNeiL1xGw2/uK2W02PGv3tWx1jgjT6oPYK"], ["created_at", "2019-12-02 18:08:50.990390"], ["updated_at", "2019-12-02 18:08:50.990390"]]
+  [1m[35m (64.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "AbsurdDream"], ["description", "You don't know who you are. You don't know what a dream is. Tis ABSURD."], ["horror_rating", 7], ["notes", "May increase suicidal behaviour."], ["created_at", "2019-12-02 18:08:51.058551"], ["updated_at", "2019-12-02 18:08:51.058551"]]
+  [1m[35m (86.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDreamtype Create (0.3ms)[0m  [1m[32mINSERT INTO "dreamtypes" ("dreamtype", "description", "horror_rating", "notes", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["dreamtype", "ComfortingDream"], ["description", "Yum, a warm piece of pie. You're fine with doing ANYTHING. Extra cozy."], ["horror_rating", 2], ["notes", "Could cause weight gain."], ["created_at", "2019-12-02 18:08:51.151747"], ["updated_at", "2019-12-02 18:08:51.151747"]]
+  [1m[35m (51.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 0], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:51.216403"], ["updated_at", "2019-12-02 18:08:51.216403"], ["name", "AbsurdProduct_0"]]
+  [1m[35m (54.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 1], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:51.278334"], ["updated_at", "2019-12-02 18:08:51.278334"], ["name", "AbsurdProduct_1"]]
+  [1m[35m (65.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 2], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:51.351339"], ["updated_at", "2019-12-02 18:08:51.351339"], ["name", "AbsurdProduct_2"]]
+  [1m[35m (69.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 3], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:51.429242"], ["updated_at", "2019-12-02 18:08:51.429242"], ["name", "AbsurdProduct_3"]]
+  [1m[35m (82.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 4], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:51.518880"], ["updated_at", "2019-12-02 18:08:51.518880"], ["name", "AbsurdProduct_4"]]
+  [1m[35m (76.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 5], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:51.601713"], ["updated_at", "2019-12-02 18:08:51.601713"], ["name", "AbsurdProduct_5"]]
+  [1m[35m (60.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 6], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:51.670148"], ["updated_at", "2019-12-02 18:08:51.670148"], ["name", "AbsurdProduct_6"]]
+  [1m[35m (74.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 7], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:51.751440"], ["updated_at", "2019-12-02 18:08:51.751440"], ["name", "AbsurdProduct_7"]]
+  [1m[35m (61.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 8], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:51.822632"], ["updated_at", "2019-12-02 18:08:51.822632"], ["name", "AbsurdProduct_8"]]
+  [1m[35m (74.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 9], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:51.920241"], ["updated_at", "2019-12-02 18:08:51.920241"], ["name", "AbsurdProduct_9"]]
+  [1m[35m (86.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 10], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:52.014822"], ["updated_at", "2019-12-02 18:08:52.014822"], ["name", "AbsurdProduct_10"]]
+  [1m[35m (80.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 11], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:52.105219"], ["updated_at", "2019-12-02 18:08:52.105219"], ["name", "AbsurdProduct_11"]]
+  [1m[35m (83.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 12], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:52.196602"], ["updated_at", "2019-12-02 18:08:52.196602"], ["name", "AbsurdProduct_12"]]
+  [1m[35m (67.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 13], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:52.270217"], ["updated_at", "2019-12-02 18:08:52.270217"], ["name", "AbsurdProduct_13"]]
+  [1m[35m (68.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 14], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:52.346680"], ["updated_at", "2019-12-02 18:08:52.346680"], ["name", "AbsurdProduct_14"]]
+  [1m[35m (84.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 15], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:52.437062"], ["updated_at", "2019-12-02 18:08:52.437062"], ["name", "AbsurdProduct_15"]]
+  [1m[35m (85.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 16], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:52.529294"], ["updated_at", "2019-12-02 18:08:52.529294"], ["name", "AbsurdProduct_16"]]
+  [1m[35m (67.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 17], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:52.603239"], ["updated_at", "2019-12-02 18:08:52.603239"], ["name", "AbsurdProduct_17"]]
+  [1m[35m (77.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.2ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 18], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:52.688702"], ["updated_at", "2019-12-02 18:08:52.688702"], ["name", "AbsurdProduct_18"]]
+  [1m[35m (90.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDreamtype Load (0.1ms)[0m  [1m[34mSELECT "dreamtypes".* FROM "dreamtypes" WHERE "dreamtypes"."dreamtype" = ? ORDER BY "dreamtypes"."id" ASC LIMIT ?[0m  [["dreamtype", "AbsurdDream"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "stock", "price_per_unit", "dreamtype_id", "created_at", "updated_at", "name") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Ab absurd-type product. Generally absurd."], ["stock", 19], ["price_per_unit", 50.0], ["dreamtype_id", 20], ["created_at", "2019-12-02 18:08:52.787583"], ["updated_at", "2019-12-02 18:08:52.787583"], ["name", "AbsurdProduct_19"]]
+  [1m[35m (84.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2019-12-02 12:09:03 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [4 times] (Duration: 2.0ms | Allocations: 1579)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/products/index.html.erb:23
+  Rendered products/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 5629)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.4ms | Allocations: 30458)
+
+
