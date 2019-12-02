@@ -14,16 +14,16 @@
    <div class="row">
     <div class="col-xs-3">
       <nav class ="navbar">
-        <ul><%= link_to "About", about_path %></ul>
-        <ul><%= link_to "Contact", contact_path %></ul>
-        <ul><%= link_to "All Products Listing", root_path %></ul>
-        <ul><%= link_to "All Dreamtypes Listing", dreamtypes_path %></ul>
-      <ul><%= link_to "Shopping Cart", shopping_bags_path %></ul>
+        <p><%= link_to "About", about_path %></p>
+        <p><%= link_to "Contact", contact_path %></p>
+        <p><%= link_to "All Products Listing", root_path %></p>
+        <p><%= link_to "All Dreamtypes Listing", dreamtypes_path %></p>
+      <p><%= link_to "Shopping Cart", shopping_bags_path %></p>
          <% if !session[:customer_name] %>
-      <ul><%= link_to "Login", login_url %></ul>
+      <p><%= link_to "Login", login_url %></p>
       <% else %>
-      <ul><%= link_to "Outstanding Orders", outstanding_url %></ul>
-      <ul><%= link_to "Logout", logout_url %></ul>
+      <p><%= link_to "Outstanding Orders", outstanding_url %></p>
+      <p><%= link_to "Logout", logout_url %></p>
        <% end %>
       </nav>
     </div>

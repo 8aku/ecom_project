@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-belongs_to :Customer
+belongs_to :customer, :class_name => "Customer", :foreign_key => "customers_id"
 validates :order_date, presence: true
 before_create :set_order_date
 before_save :set_fulfilled 

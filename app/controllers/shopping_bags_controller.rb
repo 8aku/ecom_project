@@ -4,12 +4,12 @@ class ShoppingBagsController < ApplicationController
 	def checkout
 		@customer = Customer.where(id: session[:customer_id]).first
 
-		@taxes = @customer.Province.gst + @customer.Province.pst + @customer.Province.hst
+		@taxes = @customer.province.gst + @customer.province.pst + @customer.province.hst
 		@total_cost = (current_bag.total_price * @taxes) + current_bag.total_price
 
 		if params[:tax_total]
-			@order = Order.create(order_date: Date.today, pst: @customer.Province.pst,
-				gst: @customer.Province.gst, hst: @customer.Province.hst, Customer_id: @customer.id,
+			@order = Order.create(order_date: Date.today, pst: @customer.province.pst,
+				gst: @customer.province.gst, hst: @customer.province.hst, customers_id: @customer.id,
 				total: @total_cost, 
 				fulfilled: false)
 

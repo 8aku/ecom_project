@@ -5,7 +5,7 @@
 	<p><%= image_tag product.image.url, :width => '150' unless product.image.url.nil?  %></p>
 	<p><%= number_to_currency(product.price_per_unit) %> each</p>
 	
-<div id ="cart">
+<div>
     <% if product.stock.zero? %>
     		<p>0UT OF STOCK</p>
     <% else %>

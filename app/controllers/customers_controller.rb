@@ -54,6 +54,6 @@ def outstanding
 
 	@customer = Customer.where(id: session[:customer_id]).first
 
-	@orders = Order.where(customer_id: session[:customer_id], fulfilled: false)
+	@orders = Order.where(customers_id: session[:customer_id], fulfilled: false)
 end
 end
