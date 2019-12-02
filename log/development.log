@@ -46954,3 +46954,437 @@ Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.4ms | Allocations: 304
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mProvince Create (0.2ms)[0m  [1m[32mINSERT INTO "provinces" ("code", "pst", "created_at", "updated_at", "gst") VALUES (?, ?, ?, ?, ?)[0m  [["code", "AB"], ["pst", 0.07], ["created_at", "2019-12-02 18:16:53.202852"], ["updated_at", "2019-12-02 18:16:53.202852"], ["gst", 0.07]]
   [1m[35m (62.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products?category=ComfortingDream&search=" for ::1 at 2019-12-02 12:38:19 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>""}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR Products.description LIKE '%%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [4 times] (Duration: 2.8ms | Allocations: 1577)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%%' OR Products.description LIKE '%%')[0m
+  ↳ app/views/products/index.html.erb:23
+  Rendered products/index.html.erb within layouts/application (Duration: 32.8ms | Allocations: 10168)
+Completed 200 OK in 60ms (Views: 55.6ms | ActiveRecord: 1.0ms | Allocations: 34955)
+
+
+Started GET "/products?category=ComfortingDream&search=comfort" for ::1 at 2019-12-02 12:38:25 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>"comfort"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%comfort%' OR Products.description LIKE '%comfort%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [4 times] (Duration: 4.0ms | Allocations: 1866)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%comfort%' OR Products.description LIKE '%comfort%')[0m
+  ↳ app/views/products/index.html.erb:23
+  Rendered products/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 6089)
+Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 1.0ms | Allocations: 30945)
+
+
+Started GET "/products?category=ComfortingDream&search=3" for ::1 at 2019-12-02 12:38:28 -0600
+Processing by ProductsController#index as HTML
+  Parameters: {"category"=>"ComfortingDream", "search"=>"3"}
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "dreamtypes" ON "dreamtypes"."id" = "products"."dreamtype_id" WHERE (dreamtype = 'ComfortingDream' AND name LIKE '%3%' OR Products.description LIKE '%3%') LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [2 times] (Duration: 2.7ms | Allocations: 934)
+  Rendered products/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2504)
+Completed 200 OK in 32ms (Views: 27.0ms | ActiveRecord: 0.8ms | Allocations: 27355)
+
+
+Started GET "/" for ::1 at 2019-12-02 12:39:47 -0600
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.4ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 18:39:47.240368"], ["updated_at", "2019-12-02 18:39:47.240368"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (83.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [4 times] (Duration: 3.1ms | Allocations: 1581)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/products/index.html.erb:23
+  Rendered products/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 5803)
+Completed 200 OK in 126ms (Views: 32.4ms | ActiveRecord: 84.5ms | Allocations: 33952)
+
+
+Started GET "/" for ::1 at 2019-12-02 12:39:47 -0600
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 18:39:47.377720"], ["updated_at", "2019-12-02 18:39:47.377720"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (98.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [4 times] (Duration: 3.4ms | Allocations: 1581)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/products/index.html.erb:23
+  Rendered products/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 5778)
+Completed 200 OK in 136ms (Views: 31.2ms | ActiveRecord: 99.1ms | Allocations: 33923)
+
+
+Started GET "/" for ::1 at 2019-12-02 12:39:47 -0600
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.3ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 18:39:47.621997"], ["updated_at", "2019-12-02 18:39:47.621997"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (95.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [4 times] (Duration: 3.1ms | Allocations: 1581)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/products/index.html.erb:23
+  Rendered products/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 5965)
+Completed 200 OK in 133ms (Views: 30.5ms | ActiveRecord: 96.0ms | Allocations: 33926)
+
+
+Started GET "/" for ::1 at 2019-12-02 12:41:42 -0600
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.3ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 18:41:42.809665"], ["updated_at", "2019-12-02 18:41:42.809665"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (91.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [4 times] (Duration: 3.8ms | Allocations: 1581)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/products/index.html.erb:23
+  Rendered products/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 5778)
+Completed 200 OK in 134ms (Views: 33.6ms | ActiveRecord: 92.3ms | Allocations: 33739)
+
+
+Started GET "/" for ::1 at 2019-12-02 12:41:43 -0600
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.2ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 18:41:43.059293"], ["updated_at", "2019-12-02 18:41:43.059293"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (84.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [4 times] (Duration: 3.3ms | Allocations: 1581)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/products/index.html.erb:23
+  Rendered products/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 5778)
+Completed 200 OK in 147ms (Views: 55.5ms | ActiveRecord: 85.8ms | Allocations: 33929)
+
+
+Started GET "/" for ::1 at 2019-12-02 12:41:43 -0600
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[36mShoppingBag Create (0.3ms)[0m  [1m[32mINSERT INTO "shopping_bags" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-12-02 18:41:43.261893"], ["updated_at", "2019-12-02 18:41:43.261893"]]
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (81.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/application_controller.rb:9:in `rescue in set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [4 times] (Duration: 3.9ms | Allocations: 1581)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/products/index.html.erb:23
+  Rendered products/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 5780)
+Completed 200 OK in 124ms (Views: 34.7ms | ActiveRecord: 82.4ms | Allocations: 33930)
+
+
+Started GET "/login" for ::1 at 2019-12-02 12:46:24 -0600
+Processing by CustomersController#login as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  Rendering customers/login.html.erb within layouts/application
+  Rendered customers/login.html.erb within layouts/application (Duration: 0.9ms | Allocations: 614)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.1ms | Allocations: 25666)
+
+
+Started GET "/register" for ::1 at 2019-12-02 12:46:32 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1882)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.6ms | Allocations: 27358)
+
+
+Started POST "/register" for ::1 at 2019-12-02 12:46:46 -0600
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"sc2YwyXoPK0mvJuc5oK1dsn1FhjQUrEVNQIFtN7xSQwd7I4OtMf296IL33m0zwAs/V/fMTETrJzkBDTO2ktD5w==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"D", "address"=>"122 Mystery Street", "postal_code"=>"R4R0H2", "province"=>"MB", "card_number"=>"3647557457", "password"=>"[FILTERED]", "personal_photo"=>#<ActionDispatch::Http::UploadedFile:0x00007f21c4353760 @tempfile=#<Tempfile:/tmp/RackMultipart20191202-20298-f3rhyr.jpg>, @original_filename="waifu2x.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"personal_photo\"; filename=\"waifu2x.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE "provinces"."code" = ?[0m  [["code", "MB"]]
+  ↳ app/controllers/customers_controller.rb:7:in `register'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.9ms | Allocations: 10162)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'Province_id' for Customer.):
+  
+app/controllers/customers_controller.rb:9:in `register'
+Started POST "/register" for ::1 at 2019-12-02 12:47:26 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"aoZZ/A11B2zRJpHMNxqHqUrOShf+SF+Z4+hvz8DG9Z0ZLw9oh08eGWQ9PqZfsBQllMZbM7YHpVTeJniLlyWcow==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"D", "address"=>"122 Mystery Street", "postal_code"=>"R4R0H2", "province"=>"MB", "card_number"=>"3647557457", "password"=>"[FILTERED]", "personal_photo"=>#<ActionDispatch::Http::UploadedFile:0x00007f21c0de2fb8 @tempfile=#<Tempfile:/tmp/RackMultipart20191202-20298-uxecaf.jpg>, @original_filename="waifu2x.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"personal_photo\"; filename=\"waifu2x.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE "provinces"."code" = ?[0m  [["code", "MB"]]
+  ↳ app/controllers/customers_controller.rb:7:in `register'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.5ms | Allocations: 13543)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'province_id' for Customer.):
+  
+app/controllers/customers_controller.rb:9:in `register'
+Started POST "/register" for ::1 at 2019-12-02 12:48:19 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"aoZZ/A11B2zRJpHMNxqHqUrOShf+SF+Z4+hvz8DG9Z0ZLw9oh08eGWQ9PqZfsBQllMZbM7YHpVTeJniLlyWcow==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"D", "address"=>"122 Mystery Street", "postal_code"=>"R4R0H2", "province"=>"MB", "card_number"=>"3647557457", "password"=>"[FILTERED]", "personal_photo"=>#<ActionDispatch::Http::UploadedFile:0x00007f21c2d94230 @tempfile=#<Tempfile:/tmp/RackMultipart20191202-20298-1x6itee.jpg>, @original_filename="waifu2x.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"personal_photo\"; filename=\"waifu2x.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE "provinces"."code" = ?[0m  [["code", "MB"]]
+  ↳ app/controllers/customers_controller.rb:7:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1295)
+Completed 200 OK in 78ms (Views: 44.2ms | ActiveRecord: 1.2ms | Allocations: 40987)
+
+
+Started GET "/register" for ::1 at 2019-12-02 12:48:27 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.2ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1293)
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 0.4ms | Allocations: 25977)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProvince Load (0.2ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/register" for ::1 at 2019-12-02 12:50:58 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"2V799nbL/33iApF9hlU+gJiMDhjlSRKfdstf7ZwcI1Sq96ti/PHmCFcZPhfu/60MRoQfPK0G6FJLBUipy/9Kag==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"D", "address"=>"122 Mystery Street", "postal_code"=>"R4R0H2", "province"=>"MB", "card_number"=>"3647557457", "password"=>"[FILTERED]", "personal_photo"=>#<ActionDispatch::Http::UploadedFile:0x00007f21c487c3e0 @tempfile=#<Tempfile:/tmp/RackMultipart20191202-20298-kdrf4k.jpg>, @original_filename="waifu2x.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"personal_photo\"; filename=\"waifu2x.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE "provinces"."code" = ?[0m  [["code", "MB"]]
+  ↳ app/controllers/customers_controller.rb:7:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1294)
+Completed 200 OK in 29ms (Views: 13.2ms | ActiveRecord: 1.4ms | Allocations: 40602)
+
+
+Started GET "/register" for ::1 at 2019-12-02 12:52:13 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1341)
+Completed 200 OK in 22ms (Views: 15.5ms | ActiveRecord: 0.9ms | Allocations: 30046)
+
+
+Started POST "/register" for ::1 at 2019-12-02 12:52:14 -0600
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"BYNaDjnrnwMu7PuPMqByfg2CI+mVRqO/z/Do9gEUiWR2Kgyas9GGdpv3VOVaCuHy04oyzd0JWXLyPv+yVvfgWg==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"D", "address"=>"122 Mystery Street", "postal_code"=>"R4R0H2", "province"=>"MB", "card_number"=>"3647557457", "password"=>"[FILTERED]", "personal_photo"=>#<ActionDispatch::Http::UploadedFile:0x00007f21c2d9adb0 @tempfile=#<Tempfile:/tmp/RackMultipart20191202-20298-1tkzaeq.jpg>, @original_filename="waifu2x.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"personal_photo\"; filename=\"waifu2x.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE "provinces"."code" = ?[0m  [["code", "MB"]]
+  ↳ app/controllers/customers_controller.rb:7:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1229)
+Completed 200 OK in 53ms (Views: 41.5ms | ActiveRecord: 0.7ms | Allocations: 36509)
+
+
+Started GET "/register" for ::1 at 2019-12-02 12:52:17 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1293)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.2ms | Allocations: 25970)
+
+
+Started POST "/register" for ::1 at 2019-12-02 12:52:22 -0600
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"9vN5WCD2BqJLiwwTJicUAVAQX+yO8tcySNct2YWrRH6FWi/Mqswf1/6Qo3lOjYeNjhhOyMa9Lf91GTqd0kgtQA==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"D", "address"=>"122 Mystery Street", "postal_code"=>"R4R0H2", "province"=>"MB", "card_number"=>"3647557457", "password"=>"[FILTERED]", "personal_photo"=>#<ActionDispatch::Http::UploadedFile:0x00007f21c2232d88 @tempfile=#<Tempfile:/tmp/RackMultipart20191202-20298-gnh1vl.jpg>, @original_filename="waifu2x.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"personal_photo\"; filename=\"waifu2x.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE "provinces"."code" = ?[0m  [["code", "MB"]]
+  ↳ app/controllers/customers_controller.rb:7:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1229)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.3ms | Allocations: 28555)
+
+
+Started GET "/register" for ::1 at 2019-12-02 12:52:25 -0600
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1292)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.2ms | Allocations: 25957)
+
+
+Started POST "/register" for ::1 at 2019-12-02 12:53:03 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"gD6IfwXWIQoptskjil3MKFPny7SARDwk8Jcg6MRtlqbzl97rj+w4f5ytZkni91+kje/akMgLxunNWTesk47/mA==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"D", "address"=>"122 Mystery Street", "postal_code"=>"R4R0H2", "province"=>"MB", "card_number"=>"3647557457", "password"=>"[FILTERED]", "personal_photo"=>#<ActionDispatch::Http::UploadedFile:0x00007f21d87dadd8 @tempfile=#<Tempfile:/tmp/RackMultipart20191202-20298-1s4e2se.jpg>, @original_filename="waifu2x.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"personal_photo\"; filename=\"waifu2x.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE "provinces"."code" = ?[0m  [["code", "MB"]]
+  ↳ app/controllers/customers_controller.rb:7:in `register'
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.9ms | Allocations: 175181)
+
+
+  
+NameError (undefined local variable or method `province_id' for #<CustomersController:0x00007f21c29bae70>
+Did you mean?  @province_id):
+  
+app/controllers/customers_controller.rb:17:in `register'
+Started POST "/register" for ::1 at 2019-12-02 12:53:20 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"gD6IfwXWIQoptskjil3MKFPny7SARDwk8Jcg6MRtlqbzl97rj+w4f5ytZkni91+kje/akMgLxunNWTesk47/mA==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"D", "address"=>"122 Mystery Street", "postal_code"=>"R4R0H2", "province"=>"MB", "card_number"=>"3647557457", "password"=>"[FILTERED]", "personal_photo"=>#<ActionDispatch::Http::UploadedFile:0x00007f21c45fea00 @tempfile=#<Tempfile:/tmp/RackMultipart20191202-20298-1mmtj0b.jpg>, @original_filename="waifu2x.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"personal_photo\"; filename=\"waifu2x.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE "provinces"."code" = ?[0m  [["code", "MB"]]
+  ↳ app/controllers/customers_controller.rb:7:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1825)
+Completed 200 OK in 30ms (Views: 14.5ms | ActiveRecord: 1.2ms | Allocations: 42484)
+
+
+Started GET "/register" for ::1 at 2019-12-02 12:56:01 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#register as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  Rendering customers/register.html.erb within layouts/application
+  Rendered customers/register.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1341)
+Completed 200 OK in 21ms (Views: 14.9ms | ActiveRecord: 1.0ms | Allocations: 30042)
+
+
+Started POST "/register" for ::1 at 2019-12-02 12:56:02 -0600
+Processing by CustomersController#register as HTML
+  Parameters: {"authenticity_token"=>"ZJYsH3cFM7oWYbXf2mXBccW6vyVpZbgDZX6nzSBbgEUXP3qL/T8qz6N6GrWyz1L9G7KuASEqQs5YsLCJd7jpew==", "email"=>"churzed@gmail.com", "first_name"=>"Rachel", "last_name"=>"D", "address"=>"122 Mystery Street", "postal_code"=>"R4R0H2", "province"=>"MB", "card_number"=>"3647557457", "password"=>"[FILTERED]", "personal_photo"=>#<ActionDispatch::Http::UploadedFile:0x00007f21c2cc9cd8 @tempfile=#<Tempfile:/tmp/RackMultipart20191202-20298-4wa89y.jpg>, @original_filename="waifu2x.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"personal_photo\"; filename=\"waifu2x.jpg\"\r\nContent-Type: image/jpeg\r\n">}
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."code" FROM "provinces"[0m
+  ↳ app/controllers/customers_controller.rb:4:in `register'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "provinces"."id" FROM "provinces" WHERE "provinces"."code" = ?[0m  [["code", "MB"]]
+  ↳ app/controllers/customers_controller.rb:7:in `register'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:9:in `register'
+  [1m[36mProvince Load (0.1ms)[0m  [1m[34mSELECT "provinces".* FROM "provinces" WHERE "provinces"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:9:in `register'
+  [1m[36mCustomer Create (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "last_name", "address", "postal_code", "email", "card_number", "password", "provinces_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rachel"], ["last_name", "D"], ["address", "122 Mystery Street"], ["postal_code", "R4R0H2"], ["email", "churzed@gmail.com"], ["card_number", "3647557457"], ["password", "password"], ["provinces_id", 1], ["created_at", "2019-12-02 18:56:02.718896"], ["updated_at", "2019-12-02 18:56:02.718896"]]
+  ↳ app/controllers/customers_controller.rb:9:in `register'
+  [1m[35m (53.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers_controller.rb:9:in `register'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:19:in `register'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "personal_photo"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:19:in `register'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Customer"], ["name", "personal_photo"], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:19:in `register'
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "uyl382fqz4lyhktjo6tmldiqqdxb"], ["filename", "waifu2x.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 50059], ["checksum", "m10DeaYphRzSL3wDkMrbeQ=="], ["created_at", "2019-12-02 18:56:02.823592"]]
+  ↳ app/controllers/customers_controller.rb:19:in `register'
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "personal_photo"], ["record_type", "Customer"], ["record_id", 1], ["blob_id", 1], ["created_at", "2019-12-02 18:56:02.826962"]]
+  ↳ app/controllers/customers_controller.rb:19:in `register'
+  [1m[36mCustomer Update (0.2ms)[0m  [1m[33mUPDATE "customers" SET "updated_at" = ? WHERE "customers"."id" = ?[0m  [["updated_at", "2019-12-02 18:56:02.829123"], ["id", 1]]
+  ↳ app/controllers/customers_controller.rb:19:in `register'
+  [1m[35m (84.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers_controller.rb:19:in `register'
+[36m  Disk Storage (0.8ms) [0m[32mUploaded file to key: uyl382fqz4lyhktjo6tmldiqqdxb (checksum: m10DeaYphRzSL3wDkMrbeQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: dc2d26eb-e9ab-4c7f-bd12-987e1f1bdf53) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f21c26bcdb8 @uri=#<URI::GID gid://ecom/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/products
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 302 Found in 249ms (ActiveRecord: 142.6ms | Allocations: 51222)
+
+
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc2d26eb-e9ab-4c7f-bd12-987e1f1bdf53] Performing ActiveStorage::AnalyzeJob (Job ID: dc2d26eb-e9ab-4c7f-bd12-987e1f1bdf53) from Async(active_storage_analysis) enqueued at 2019-12-02T18:56:02Z with arguments: #<GlobalID:0x00007f21c25e37c0 @uri=#<URI::GID gid://ecom/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc2d26eb-e9ab-4c7f-bd12-987e1f1bdf53] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: uyl382fqz4lyhktjo6tmldiqqdxb[0m
+Started GET "/products" for ::1 at 2019-12-02 12:56:03 -0600
+Processing by ProductsController#index as HTML
+  [1m[36mShoppingBag Load (0.1ms)[0m  [1m[34mSELECT "shopping_bags".* FROM "shopping_bags" WHERE "shopping_bags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7:in `set_bag'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dreamtypes"."dreamtype" FROM "dreamtypes"[0m
+  ↳ app/controllers/products_controller.rb:24:in `index'
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:12
+  Rendered collection of products/_product.html.erb [4 times] (Duration: 3.3ms | Allocations: 2156)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/views/products/index.html.erb:23
+  Rendered products/index.html.erb within layouts/application (Duration: 64.8ms | Allocations: 17555)
+Completed 200 OK in 85ms (Views: 79.8ms | ActiveRecord: 1.3ms | Allocations: 44381)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc2d26eb-e9ab-4c7f-bd12-987e1f1bdf53]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc2d26eb-e9ab-4c7f-bd12-987e1f1bdf53]   [1m[36mActiveStorage::Blob Update (0.2ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"width\":451,\"height\":538,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc2d26eb-e9ab-4c7f-bd12-987e1f1bdf53]   [1m[35m (117.0ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc2d26eb-e9ab-4c7f-bd12-987e1f1bdf53] Performed ActiveStorage::AnalyzeJob (Job ID: dc2d26eb-e9ab-4c7f-bd12-987e1f1bdf53) from Async(active_storage_analysis) in 468.51ms

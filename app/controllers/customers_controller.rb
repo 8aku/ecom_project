@@ -4,7 +4,7 @@ class CustomersController < ApplicationController
 		@codes = Province.pluck(:code)
 		
 		if params.include?(:first_name)
-			province_id = Province.where(code: params[:province]).pluck(:id).first
+			@province_id = Province.where(code: params[:province]).pluck(:id).first
 
 			@customer = Customer.create(first_name: params[:first_name],
 				last_name: params[:last_name],
@@ -14,7 +14,7 @@ class CustomersController < ApplicationController
 				phone: params[:phone], 
 				card_number: params[:card_number],
 				password: params[:password],
-				Province_id: province_id)
+				provinces_id: @province_id)
 
 			@customer.personal_photo.attach(params[:personal_photo])
 

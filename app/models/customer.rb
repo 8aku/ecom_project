@@ -1,6 +1,6 @@
 class Customer < ApplicationRecord
 	has_one_attached :personal_photo
-	belongs_to :province
+	belongs_to :province, :class_name => "Province", :foreign_key => "provinces_id"
 
 	validates :first_name, presence: true
 	validates :last_name, presence: true
